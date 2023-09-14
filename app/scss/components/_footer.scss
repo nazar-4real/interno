@@ -1,0 +1,98 @@
+@use 'core/vars';
+@use 'core/mixins';
+
+.footer {
+  padding-top: 50px;
+
+  @media (width <= 991px) {
+    padding-top: 80px;
+  }
+
+  @media (width <= 767px) {
+    padding-top: 50px;
+
+    &__col-list_link {
+      font-size: 22px;
+    }
+  }
+
+  &__cols {
+    @include mixins.flexBox(flex-start, space-between);
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+
+    @media (width <= 1024px) {
+      justify-content: initial;
+      gap: 70px;
+    }
+
+    @media (width <= 991px) {
+      padding-bottom: 50px;
+      justify-content: space-between;
+    }
+
+    @media (width <= 767px) {
+      gap: 50px 90px;
+      justify-content: initial;
+    }
+  }
+
+  &__col {
+    address {
+      font-style: normal;
+    }
+
+    &:nth-child(1) {
+      flex: 0 0 393px;
+
+      @media (width <= 991px) {
+        flex: 1 1 100%;
+      }
+    }
+
+    &:nth-child(4) {
+      flex: 0 1 258px;
+    }
+
+    &-title {
+      font-size: 25px;
+      line-height: 31px;
+      margin-bottom: 28px;
+
+      @media (width <= 767px) {
+        text-align: left;
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &-list_item + &-list_item {
+      margin-top: 30px;
+
+      @media (width <= 767px) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .logo {
+    margin-bottom: 18px;
+  }
+
+  .copy {
+    padding: 30px 0 37px;
+    border-top: 1px solid vars.$dimmed;
+
+    @media (width <= 991px) {
+      padding: 30px;
+    }
+
+    &__text {
+      text-align: center;
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@use "../core/vars";
+@use "../core/mixins";
+
+#team-page .team {
+  padding: 200px 0 100px;
+  background: transparent;
+
+  &__cards {
+    margin-top: 0;
+  }
+
+  &__card {
+    height: auto;
+    perspective: none;
+    transition: 0.5s;
+    padding-bottom: 38px;
+
+    &:hover {
+      box-shadow: 5px 5px 10px -3px rgba(0 0 0 / 0.4);
+    }
+
+    &-front {
+      position: relative;
+      height: 433px;
+
+      @media screen and (width <= 620px) {
+        height: 550px;
+      }
+    }
+
+    &:hover .team__card-front img {
+      transform: scale(1.1);
+    }
+
+    &:hover .team__card-front,
+    &-front:hover {
+      transform: unset;
+    }
+
+    &-info {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .main-text {
+      margin: 0;
+    }
+
+    &-social {
+      margin: 20px 0 0;
+      justify-content: center;
+    }
+  }
+}

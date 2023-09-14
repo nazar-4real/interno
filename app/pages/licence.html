@@ -1,0 +1,123 @@
+{% set title = 'Licence' %}
+{% set icon = 'images/favicon.svg' %}
+{% from 'templates/page-caption.html' import pageCaption as pageCaption %}
+
+{% include 'components/_header.html' %}
+
+<main class="main" id="licence-page">
+
+  {{ pageCaption('licence-hero', 'Licences', 'licence-page/licence-bg.jpg', [
+    {
+      linkName: 'Home',
+      linkUrl: '/'
+    }
+  ]) }}
+
+  <section class="licence-info">
+    <div class="container">
+      <div class="licence-info__body">
+        <h2 class="main-title">
+          Photography
+        </h2>
+        <p class="main-text">
+          All images used in the
+          <span class="orange-text">Interno</span>
+          Webflow Ecommerce Template are licensed for free personal and commercial use. If you'd like to use any specific image, you can check the licenses and download the images for free on
+          <strong>Unsplash</strong>,
+          <strong>Pexels</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="licence-section">
+    <div class="container">
+      <div class="licence-section__body">
+        <div class="licence-section__info">
+          <h3 class="main-title">
+            Unsplash
+          </h3>
+          <p class="main-text">
+            Image 1, Image 2, Image 3, Image 4, Image 5, Image 6, Image 7, Image 8, Image 9, Image 10, Image 11, Image 12, Image 13, Image 14, Image 15, Image 16, Image 17.
+          </p>
+        </div>
+        <div class="licence-section__images">
+          <figure class="licence-section__figure">
+            <img src="images/licence-page/unsplash-1.jpg" alt="" class="licence-section__img">
+          </figure>
+          <figure class="licence-section__figure">
+            <img src="images/licence-page/unsplash-2.jpg" alt="" class="licence-section__img">
+          </figure>
+          <figure class="licence-section__figure">
+            <img src="images/licence-page/unsplash-3.jpg" alt="" class="licence-section__img">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="licence-section">
+    <div class="container">
+      <div class="licence-section__body">
+        <div class="licence-section__info">
+          <h3 class="main-title">
+            Pexels
+          </h3>
+          <p class="main-text">
+            Image 1, Image 2, Image 3, Image 4, Image 5, Image 6, Image 7, Image 8, Image 9, Image 10, Image 11, Image 12, Image 13, Image 14, Image 15, Image 16, Image 17.
+          </p>
+        </div>
+        <div class="licence-section__images">
+          <figure class="licence-section__figure">
+            <img src="images/licence-page/pexels-1.jpg" alt="" class="licence-section__img">
+          </figure>
+          <figure class="licence-section__figure">
+            <img src="images/licence-page/pexels-2.jpg" alt="" class="licence-section__img">
+          </figure>
+          <figure class="licence-section__figure">
+            <img src="images/licence-page/pexels-3.jpg" alt="" class="licence-section__img">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="licence-section">
+    <div class="container">
+      <div class="licence-section__body">
+        <div class="licence-section__info">
+          <h3 class="main-title">
+            Font
+          </h3>
+          <div class="licence-section__info-inner">
+            <p class="main-text">
+              Interno template uses free licensed
+              <strong>
+                <span class="colored-text">Google Fonts</span></strong>. Please check
+              <strong>DM Serif Display</strong>
+              and
+              <strong>Jost</strong>.
+            </p>
+            <p class="letters letters-dmserifdisplay">
+              Aa
+            </p>
+            <p class="letters letters-jost">
+              Aa
+            </p>
+          </div>
+          <h3 class="main-title">
+            Icon
+          </h3>
+          <div class="licence-section__info-inner">
+            <p class="main-text">
+              Icon 1, Icon 2, Icon 3
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{% include 'components/_footer.html' %}

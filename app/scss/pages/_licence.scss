@@ -1,0 +1,102 @@
+@use '../core/vars';
+@use '../core/mixins';
+
+#licence-page {
+  .main-title {
+    margin-bottom: 25px;
+  }
+
+  .orange-text {
+    color: vars.$sandy;
+    font-weight: 700;
+  }
+}
+
+.licence {
+  &-section {
+    padding: 50px 0;
+
+    &:last-child {
+      padding-bottom: 100px;
+    }
+
+    &__body {
+      background: vars.$light;
+      border-radius: 70px;
+      padding: 69px 47px;
+    }
+
+    &__info .main-text {
+      max-width: 495px;
+      align-self: center;
+    }
+
+    .colored-text {
+      color: vars.$sandy;
+    }
+
+    .main-title {
+      font-size: 35px;
+      line-height: 52.5px;
+    }
+
+    &__info-inner + .main-title {
+      margin-top: 58px;
+    }
+
+    &__info-inner {
+      @include mixins.flexBox(baseline);
+      gap: 43px;
+    }
+
+    .letters {
+      @include mixins.insertFont(85px, normal, 400);
+      letter-spacing: 0.85px;
+      color: vars.$dark;
+
+      &-dmserifdisplay {
+        font-family: 'DM Serif Display';
+      }
+
+      &-jost {
+        font-family: vars.$baseFont;
+      }
+    }
+
+    &__images {
+      @include mixins.flexBox(center);
+      gap: 41px;
+      margin-top: 54px;
+
+      @media (width <= 767px) {
+        flex-direction: column;
+      }
+    }
+
+    &__figure {
+      border-radius: 31px;
+    }
+
+    &__img {
+      @include mixins.dimensions100;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+
+  &-info {
+    padding: 200px 0 50px;
+
+    @media (width <= 1024px) {
+      padding-top: 100px;
+    }
+
+    @media (width <= 767px) {
+      padding-top: 70px;
+    }
+  }
+
+  &-info__body {
+    max-width: 906px;
+  }
+}

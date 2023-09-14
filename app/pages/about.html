@@ -1,0 +1,215 @@
+{% set title = 'About Us' %}
+{% set icon = 'images/favicon.svg' %}
+{% from 'templates/page-caption.html' import pageCaption as pageCaption %}
+
+{% include 'components/_header.html' %}
+
+<main class="main" id="about-page">
+
+  {{ pageCaption('about-hero', 'About Us', 'about-page/about-bg.jpg', [
+    {
+      linkName: 'Home',
+      linkUrl: '/'
+    }
+  ]) }}
+
+  <div class="quote">
+    <div class="container">
+      <div class="quote__body">
+        <blockquote class="main-title quote__text">
+          <p>
+            I like an interior that defies labeling. I don't really want someone to walk into a room and know that I did it
+          </p>
+          <cite class="main-text quote__author">
+            -BUNNY WILLIAMS
+          </cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <section class="activity flexile-section">
+    <div class="container">
+      <div class="activity__body flexile-section__content">
+        <div class="activity__info flexile-section__info">
+          <h2 class="main-title">What We Do</h2>
+          <p class="main-text">
+            It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.
+          </p>
+          <a class="main-link" href="#">
+            Our Concept
+            {% include 'images/arrow-right.svg' %}
+          </a>
+        </div>
+        <figure class="activity__img flexile-section__figure">
+          <img src="./images/about-page/activity-img.jpg" alt="Interior"/>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="result flexile-section">
+    <div class="container">
+      <div class="result__body flexile-section__content">
+        <figure class="result__img flexile-section__figure">
+          <img src="./images/about-page/result-img.jpg" alt="Interior"/>
+        </figure>
+        <div class="result__info flexile-section__info">
+          <h2 class="main-title">What We Do</h2>
+          <p class="main-text">
+            It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.
+          </p>
+          <a class="main-link" href="#">
+            Our Concept
+            {% include 'images/arrow-right.svg' %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="container">
+      <div class="team__body">
+        <h2 class="main-title">
+          What the People Thinks About Us
+        </h2>
+        <div class="team__cards">
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-1.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-back">
+              <h4 class="main-title team__card-title">Charlotte Levi</h4>
+              <p class="main-text team__card-descr">Design, Australia</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+                <a class="social__item linkedin" href="#">
+                  {% include 'images/social/linkedin.svg' %}
+                </a>
+                <a class="social__item instagram" href="#">
+                  {% include 'images/social/instagram.svg' %}
+                </a>
+              </div>
+              <a class="team__card-phone hover-link" href="tel:+13784001234">+1 (214) 567-5684</a>
+              <a class="team__card-email hover-link" href="mailto:julie@email.com">greg.verton@email.com</a>
+            </div>
+          </div>
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-2.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-back">
+              <h4 class="main-title team__card-title">Nattasha Julie</h4>
+              <p class="main-text team__card-descr">Design, Australia</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+                <a class="social__item linkedin" href="#">
+                  {% include 'images/social/linkedin.svg' %}
+                </a>
+                <a class="social__item instagram" href="#">
+                  {% include 'images/social/instagram.svg' %}
+                </a>
+              </div>
+              <a class="team__card-phone hover-link" href="tel:+13784001234">+1 (378) 400-1234</a>
+              <a class="team__card-email hover-link" href="mailto:julie@email.com">julie@email.com</a>
+            </div>
+          </div>
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-3.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-back">
+              <h4 class="main-title team__card-title">John Smith</h4>
+              <p class="main-text team__card-descr">Design, Australia</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+                <a class="social__item linkedin" href="#">
+                  {% include 'images/social/linkedin.svg' %}
+                </a>
+                <a class="social__item instagram" href="#">
+                  {% include 'images/social/instagram.svg' %}
+                </a>
+              </div>
+              <a class="team__card-phone hover-link" href="tel:+13784001234">+1 (756) 293-3984</a>
+              <a class="team__card-email hover-link" href="mailto:julie@email.com">martin.brok@email.com</a>
+            </div>
+          </div>
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-4.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-back">
+              <h4 class="main-title team__card-title">Nora Owen</h4>
+              <p class="main-text team__card-descr">Design, Australia</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+                <a class="social__item linkedin" href="#">
+                  {% include 'images/social/linkedin.svg' %}
+                </a>
+                <a class="social__item instagram" href="#">
+                  {% include 'images/social/instagram.svg' %}
+                </a>
+              </div>
+              <a class="team__card-phone hover-link" href="tel:+13784001234">+1 (093) 345-2903</a>
+              <a class="team__card-email hover-link" href="mailto:julie@email.com">melissa.norvein@email.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mailbox">
+    <div class="container">
+      <div class="mailbox__body">
+        <div class="mailbox__caption">
+          <h2 class="main-title">
+            Creative project? Let's have a productive talk.
+          </h2>
+        </div>
+        <form class="mailbox__form" id="mailbox-form">
+          <label class="mailbox__label">
+            <input class="mailbox__input" type="text" name="name" required/>
+            <span class="main-text mark">Name</span>
+          </label>
+          <label class="mailbox__label">
+            <input class="mailbox__input" type="email" name="email" required/>
+            <span class="main-text mark">Email</span>
+          </label>
+          <label class="mailbox__label">
+            <textarea class="mailbox__input textarea" name="comment" required></textarea>
+            <span class="main-text mark">Hello Iam Intrested in..</span>
+          </label>
+          <button class="main-link mailbox__submit" type="submit">
+            Send Now
+            {% include 'images/arrow-right.svg' %}
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{% include 'components/_footer.html' %}

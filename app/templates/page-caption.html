@@ -1,0 +1,23 @@
+{% macro pageCaption(class, title, background, pagination, currentPaginationItem = title) %}
+  <section class="{{ class }} page-caption" style="background-image: url(images/{{ background }})">
+    {% if title and pagination %}
+      <div class="container">
+        <div class="{{ class }}__body">
+          <div class="page-caption__info">
+            <h2 class="main-title">
+              {{ title }}
+            </h2>
+            <p class="main-text pagination">
+              {% for item in pagination %}
+                <a class="hover-link" href="{{ item.linkUrl }}">
+                  {{ item.linkName }}
+                </a>
+              {% endfor %}
+              <a>{{ currentPaginationItem }}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </section>
+{% endmacro %}

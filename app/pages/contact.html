@@ -1,0 +1,102 @@
+{% set title = 'Contact Us' %}
+{% set icon = 'images/favicon.svg' %}
+{% from 'templates/page-caption.html' import pageCaption as pageCaption %}
+
+{% include 'components/_header.html' %}
+
+<main class="main" id="contact-page">
+
+  {{ pageCaption('contact-hero', 'Contact Us', 'contact-page/contact-bg.jpg', [
+    {
+      linkName: 'Home',
+      linkUrl: '/'
+    }
+  ], 'Contact') }}
+
+  <section class="connect">
+    <div class="container">
+      <div class="connect__body">
+        <h2 class="main-title">
+          We love meeting new people and helping them.
+        </h2>
+        <div class="connect__content">
+          <aside class="connect__aside">
+            <div class="connect__aside-links">
+              <a class="profile__contacts-link main-text connect__aside-link" href="mailto:info@yourdomain.com">
+                {% include 'images/envelope.svg' %}
+                <span class="hover-link">
+                  info@yourdomain.com
+                </span>
+              </a>
+              <a class="profile__contacts-link main-text connect__aside-link" href="tel:+13784001234">
+                {% include 'images/phone.svg' %}
+                <span class="hover-link">
+                  +1 (378) 400-1234
+                </span>
+              </a>
+              <a class="profile__contacts-link main-text connect__aside-link" href="#">
+                {% include 'images/site.svg' %}
+                <span class=" hover-link">
+                  www.yourdomain.com
+                </span>
+              </a>
+            </div>
+            <div class="connect__aside-social social">
+              <a class="social__item facebook" href="#">
+                {% include 'images/social/facebook.svg' %}
+              </a>
+              <a class="social__item twitter" href="#">
+                {% include 'images/social/twitter.svg' %}
+              </a>
+              <a class="social__item linkedin" href="#">
+                {% include 'images/social/linkedin.svg' %}
+              </a>
+              <a class="social__item instagram" href="#">
+                {% include 'images/social/instagram.svg' %}
+              </a>
+            </div>
+          </aside>
+          <form class="mailbox__form" id="mailbox-form">
+            <label class="mailbox__label">
+              <input class="mailbox__input" type="text" name="name" required/>
+              <span class="main-text mark">Name</span>
+            </label>
+            <label class="mailbox__label">
+              <input class="mailbox__input" type="email" name="email" required/>
+              <span class="main-text mark">Email</span>
+            </label>
+            <label class="mailbox__label">
+              <input class="mailbox__input" type="text" name="subject" required/>
+              <span class="main-text mark">Subject</span>
+            </label>
+            <label class="mailbox__label">
+              <input class="mailbox__input" type="number" name="phone" required/>
+              <span class="main-text mark">Phone</span>
+            </label>
+            <label class="mailbox__label">
+              <textarea class="mailbox__input textarea" name="comment" required></textarea>
+              <span class="main-text mark">Hello Iam Intrested in..</span>
+            </label>
+            <button class="main-link mailbox__submit" type="submit">
+              Send Now
+              {% include 'images/arrow-right.svg' %}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="map">
+    <div class="container">
+      <div class="map__body">
+        <figure class="map__figure">
+          <img class="map__img" src="images/contact-page/map.jpg" alt="Map">
+        </figure>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+{% include 'components/_footer.html' %}

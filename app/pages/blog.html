@@ -1,0 +1,164 @@
+{% set title = 'Articles & News' %}
+{% set icon = 'images/favicon.svg' %}
+{% from 'templates/page-caption.html' import pageCaption as pageCaption %}
+
+{% include 'components/_header.html' %}
+
+<main class="main" id="blog-page">
+
+  {{ pageCaption('blog-hero', 'Articles & News', 'blog-page/blog-bg.jpg', [
+    {
+      linkName: 'Home',
+      linkUrl: '/'
+    }
+  ],
+  'Blog') }}
+
+  <section class="post">
+    <div class="container">
+      <div class="post__body">
+        <h2 class="main-title">Latest Post</h2>
+        <div class="post__card">
+          <figure class="post__card-figure">
+            <a class="post__card-figure--link" href="#">
+              <img class="post__card-img" src="images/blog-page/post.jpg" alt="Post"/>
+            </a>
+          </figure>
+          <div class="post__card-info">
+            <a class="post__card-title main-title" href="article.html">
+              Low Cost Latest Invented Interior Designing Ideas
+            </a>
+            <div class="main-text">
+              <p>
+                Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belief.
+              </p>
+              <p>
+                Lorem Ipsum is not simply random text. It has roots in a piece of classica.
+              </p>
+            </div>
+            <div class="post__card-date">
+              <span>
+                26 December,2022
+              </span>
+              {% include 'images/arrow-right-bg.svg' %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog" id="blog">
+    <div class="container">
+      <div class="blog__body">
+        <h2 class="main-title">Articles & News</h2>
+        <div class="blog__articles">
+          <div class="blog__article">
+            <figure class="blog__article-figure">
+              <a class="blog__article-figlink" href="#">
+                <img class="blog__article-img" src="images/blog/article-1.jpg" alt="Interior"/>
+                <figcaption class="blog__article-figcaption">
+                  Kitchan Design
+                </figcaption>
+              </a>
+            </figure>
+            <a class="blog__article-title main-title" href="#">
+              Let’s Get Solution For Building Construction Work
+            </a>
+            <div class="blog__article-footer">
+              <p class="blog__article-date main-text">26 December,2022</p>
+              {% include 'images/arrow-right-bg.svg' %}
+            </div>
+          </div>
+          <div class="blog__article">
+            <figure class="blog__article-figure">
+              <a class="blog__article-figlink" href="#">
+                <img class="blog__article-img" src="images/blog/article-2.jpg" alt="Interior"/>
+                <figcaption class="blog__article-figcaption">
+                  Living Design
+                </figcaption>
+              </a>
+            </figure>
+            <a class="blog__article-title main-title" href="#">
+              Low Cost Latest Invented Interior Designing Ideas.
+            </a>
+            <div class="blog__article-footer">
+              <p class="blog__article-date main-text">22 December,2022</p>
+              {% include 'images/arrow-right-bg.svg' %}
+            </div>
+          </div>
+          <div class="blog__article">
+            <figure class="blog__article-figure">
+              <a class="blog__article-figlink" href="#">
+                <img class="blog__article-img" src="images/blog/article-3.jpg" alt="Interior"/>
+                <figcaption class="blog__article-figcaption">
+                  Interior Design
+                </figcaption>
+              </a>
+            </figure>
+            <a class="blog__article-title main-title" href="#">
+              Best For Any Office & Business Interior Solution
+            </a>
+            <div class="blog__article-footer">
+              <p class="blog__article-date main-text">25 December,2022</p>
+              {% include 'images/arrow-right-bg.svg' %}
+            </div>
+          </div>
+          <div class="blog__article">
+            <figure class="blog__article-figure">
+              <a class="blog__article-figlink" href="#">
+                <img class="blog__article-img" src="images/blog/article-1.jpg" alt="Interior"/>
+                <figcaption class="blog__article-figcaption">
+                  Kitchan Design
+                </figcaption>
+              </a>
+            </figure>
+            <a class="blog__article-title main-title" href="#">
+              Let’s Get Solution For Building Construction Work
+            </a>
+            <div class="blog__article-footer">
+              <p class="blog__article-date main-text">26 December,2022</p>
+              {% include 'images/arrow-right-bg.svg' %}
+            </div>
+          </div>
+          <div class="blog__article">
+            <figure class="blog__article-figure">
+              <a class="blog__article-figlink" href="#">
+                <img class="blog__article-img" src="images/blog/article-2.jpg" alt="Interior"/>
+                <figcaption class="blog__article-figcaption">
+                  Living Design
+                </figcaption>
+              </a>
+            </figure>
+            <a class="blog__article-title main-title" href="#">
+              Low Cost Latest Invented Interior Designing Ideas.
+            </a>
+            <div class="blog__article-footer">
+              <p class="blog__article-date main-text">22 December,2022</p>
+              {% include 'images/arrow-right-bg.svg' %}
+            </div>
+          </div>
+          <div class="blog__article">
+            <figure class="blog__article-figure">
+              <a class="blog__article-figlink" href="#">
+                <img class="blog__article-img" src="images/blog/article-3.jpg" alt="Interior"/>
+                <figcaption class="blog__article-figcaption">
+                  Interior Design
+                </figcaption>
+              </a>
+            </figure>
+            <a class="blog__article-title main-title" href="#">
+              Best For Any Office & Business Interior Solution
+            </a>
+            <div class="blog__article-footer">
+              <p class="blog__article-date main-text">25 December,2022</p>
+              {% include 'images/arrow-right-bg.svg' %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include 'components/_footer.html' %}

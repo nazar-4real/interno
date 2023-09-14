@@ -1,0 +1,11 @@
+@use "core/mixins";
+
+@include mixins.importFont("DMSerifDisplay", "Regular", 400);
+
+@include mixins.importFont("Jost", "Regular", 400);
+
+@include mixins.importFont("Jost", "Medium", 500);
+
+@include mixins.importFont("Jost", "SemiBold", 600);
+
+@include mixins.importFont("Jost", "Bold", 700);

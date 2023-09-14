@@ -1,0 +1,19 @@
+{% set title = 'Template page' %}
+{% set icon = 'images/favicon.svg' %}
+{% from 'templates/page-caption.html' import pageCaption as pageCaption %}
+
+{% include 'components/_header.html' %}
+
+<main class="main" id="template-page">
+
+  {{ pageCaption('template-hero', 'Template', 'service-page/service-bg.jpg', [
+    {
+      linkName: 'Home',
+      linkUrl: '/'
+    }
+  ]) }}
+
+  Hello from Main
+</main>
+
+{% include 'components/_footer.html' %}

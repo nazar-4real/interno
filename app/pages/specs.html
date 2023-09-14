@@ -1,0 +1,95 @@
+{% set title = 'Specs' %}
+{% set icon = 'images/favicon.svg' %}
+{% from 'templates/page-caption.html' import pageCaption as pageCaption %}
+
+{% include 'components/_header.html' %}
+
+<main class="main" id="specs-page">
+
+  {{ pageCaption('specs-hero', false, 'specs-page/specs-bg.jpg') }}
+
+  <section class="specs">
+    <div class="container">
+      <div class="specs__body">
+        <aside class="specs__aside">
+          <ul class="specs__list">
+            <li class="specs__list-item">
+              <span class="main-title">
+                Client
+              </span>
+              <span class="main-text">
+                Your client name
+              </span>
+            </li>
+            <li class="specs__list-item">
+              <span class="main-title">
+                Category
+              </span>
+              <span class="main-text">
+                Interiors
+              </span>
+            </li>
+            <li class="specs__list-item">
+              <span class="main-title">
+                Tags
+              </span>
+              <span class="main-text">
+                interior, Home
+              </span>
+            </li>
+            <li class="specs__list-item">
+              <span class="main-title">
+                Date
+              </span>
+              <span class="main-text">
+                Date 23,02, 2022
+              </span>
+            </li>
+            <li class="specs__list-item">
+              <span class="main-title">
+                Link
+              </span>
+              <span class="main-text">
+                Link example.com
+              </span>
+            </li>
+          </ul>
+        </aside>
+        <div class="specs__info">
+          <h2 class="main-title">
+            Minimal Look Bedrooms
+          </h2>
+          <div class="main-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus.
+              Aliquam sollicitudin
+              tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla
+              mattis.
+              Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.
+            </p>
+            <p>
+              In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc,
+              mattis quis nibh
+              id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit,
+              in viverra
+              felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="search-banner">
+    <div class="container">
+      <div class="search-banner__body">
+        <button class="search-banner__btn">
+          {% include 'images/search.svg' %}
+        </button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{% include 'components/_footer.html' %}

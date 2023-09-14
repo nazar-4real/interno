@@ -1,0 +1,159 @@
+@use 'core/vars';
+@use 'core/mixins';
+
+// Specs
+
+.specs {
+  padding-top: 200px;
+
+  @media (width <= 1024px) {
+    padding-top: 100px;
+  }
+
+  &__body {
+    @include mixins.flexBox(center, space-between);
+    gap: 42px;
+
+    @media (width <= 1024px) {
+      align-items: stretch;
+    }
+
+    @media (width <= 767px) {
+      flex-direction: column;
+    }
+  }
+
+  &__aside {
+    flex: 1 0 500px;
+    max-width: 500px;
+    background: vars.$light;
+    padding: 55px 84px;
+    border-radius: 70px;
+
+    @media (width <= 910px) {
+      flex-basis: 440px;
+      border-radius: 40px;
+      padding: 50px;
+    }
+
+    @media (width <= 767px) {
+      flex-basis: auto;
+      align-self: center;
+      width: 100%;
+    }
+
+    @media (width <= 480px) {
+      border-radius: 20px;
+      padding: 35px;
+    }
+  }
+
+  &__list-item {
+    @include mixins.flexBox(baseline);
+    gap: 50px;
+
+    @media (width <= 767px) {
+      justify-content: space-between;
+    }
+
+    @media (width <= 480px) {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    & + & {
+      margin-top: 20px;
+
+      @media (width <= 480px) {
+        margin-top: 15px;
+      }
+    }
+
+    .main-title,
+    .main-text {
+      font-size: 22px;
+      line-height: 33px;
+      text-align: left;
+    }
+
+    .main-title {
+      flex: 0 0 98px;
+
+      @media (width <= 480px) {
+        flex-basis: auto;
+      }
+    }
+  }
+
+  &__info {
+    max-width: 658px;
+
+    @media (width <= 767px) {
+      max-width: 100%;
+    }
+
+    .main-title {
+      margin-bottom: 11px;
+      text-align: left;
+    }
+
+    @media (width <= 480px) {
+      text-align: justify;
+    }
+
+    .main-text p + p {
+      margin-top: 30px;
+    }
+  }
+}
+
+// Search banner
+
+.search-banner {
+  @media (width <= 575px) {
+    padding-top: 0;
+  }
+
+  &__body {
+    height: clamp(440px, 100vmin, 799px);
+    border-radius: 70px;
+    position: relative;
+    background: url(../images/specs-page/search-banner-bg.jpg) center / cover
+      no-repeat;
+
+    @media (width <= 767px) {
+      border-radius: 30px;
+    }
+
+    @media (width <= 575px) {
+      border-radius: 20px;
+    }
+  }
+
+  &__btn {
+    @include mixins.flexBox(center, center);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background: vars.$white;
+
+    @media (width <= 767px) {
+      width: 90px;
+      height: 90px;
+    }
+
+    svg {
+      width: 28.031%;
+      height: 28.031%;
+    }
+
+    svg path {
+      stroke: vars.$sandy;
+      stroke-width: 3px;
+    }
+  }
+}

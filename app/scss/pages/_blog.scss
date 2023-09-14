@@ -1,0 +1,116 @@
+@use 'core/vars';
+@use 'core/mixins';
+
+#blog-page {
+  .blog__body > .main-title {
+    font-size: 50px;
+    line-height: 62.5px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+}
+
+// Post
+
+.post {
+  padding: 200px 0 50px;
+
+  @media (width <= 1024px) {
+    padding-top: 100px;
+  }
+
+  .main-title {
+    text-align: left;
+  }
+
+  &__card {
+    @include mixins.flexBox(center, space-between);
+    gap: 65px;
+    margin-top: 27px;
+    padding: 22px;
+    border: 1px solid vars.$dimmed;
+    border-radius: 62px;
+
+    @media (width <= 991px) {
+      border-radius: 25px;
+      gap: 35px;
+    }
+
+    @media (width <= 767px) {
+      flex-direction: column;
+      border-radius: 15px;
+      padding: 15px;
+    }
+
+    &-figure,
+    &-info {
+      flex: 1;
+    }
+
+    &-figure {
+      height: 478px;
+      border-radius: 50px;
+      overflow: hidden;
+
+      @media (width <= 991px) {
+        border-radius: inherit;
+      }
+    }
+
+    &-figure--link {
+      @include mixins.dimensions100;
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: inherit;
+    }
+
+    &-img {
+      @extend .post__card-figure--link;
+      transition: 0.7s;
+    }
+
+    &-figure:hover &-img {
+      transform: scale(1.2);
+    }
+
+    &-title {
+      font-size: 25px;
+      line-height: 31.25px;
+      margin-bottom: 22px;
+      transition: 0.7s;
+
+      &:hover {
+        color: vars.$sandy;
+      }
+    }
+
+    .main-text p + p {
+      margin-top: 40px;
+
+      @media (width <= 767px) {
+        margin-top: 20px;
+      }
+    }
+
+    &-date {
+      @include mixins.flexBox(center, space-between);
+      margin-top: 41px;
+    }
+
+    &-date svg {
+      width: 52px;
+      height: 52px;
+    }
+
+    &-date circle {
+      stroke: vars.$darkGray;
+      stroke-dasharray: 213px;
+      stroke-dashoffset: 213px;
+      transition: 0.7s;
+    }
+
+    &-title:hover ~ &-date circle {
+      stroke-dashoffset: 0;
+    }
+  }
+}

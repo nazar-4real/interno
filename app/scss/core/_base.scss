@@ -1,0 +1,28 @@
+// General
+@use 'libs';
+@use 'fonts';
+@forward 'vars';
+@forward 'animations';
+@forward 'mixins';
+@use 'global';
+
+// Components
+@use '../components/header';
+@use '../components/footer';
+
+// Pages
+@use '../pages/about';
+@use '../pages/pricing';
+@use '../pages/service';
+@use '../pages/services';
+@use '../pages/projects';
+@use '../pages/specs';
+@use '../pages/blog';
+@use '../pages/article';
+@use '../pages/team';
+@use '../pages/teammate';
+@use '../pages/contact';
+@use '../pages/faqs';
+@use '../pages/not-found';
+@use '../pages/licence';
+@use '../pages/changelog';

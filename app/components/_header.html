@@ -1,0 +1,71 @@
+{% set menuData = [
+  {
+    name: 'Home',
+    url: '/'
+  }, {
+    name: 'Pages',
+    url: '#'
+  }, {
+    name: 'Services',
+    url: 'services.html'
+  }, {
+    name: 'Projects',
+    url: 'projects.html'
+  }, {
+    name: 'Blog',
+    url: 'blog.html'
+  }, {
+    name: 'Contact',
+    url: 'contact.html'
+  }
+] %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href={{icon}} type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>{{ title }}</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+      <header class="header">
+        <div class="container">
+          <div class="header__body">
+            <a class="logo" href="/">
+              <img class="logo-img" src="./images/logo.svg" alt="Logotype"/>
+            </a>
+            <nav class="nav-menu">
+              <div class="menu-wrapper">
+                <ul class="menu">
+                  {% for menuItem in menuData %}
+                    <li class="menu__item">
+                      <a class="menu__item-link hover-link" href="{{menuItem.url}}" {% if menuItem.attrs %} {% for attr in
+                    menuItem.attrs | dictsort %} {{ attr[0] }}="{{attr[1]}}" {% endfor %} {% endif %}>
+                        {{menuItem.name}}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <button class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <form class="search">
+                <input class="search__field" type="text" name="search" placeholder="Enter your query">
+                <button class="search__btn" type="submit">
+                  <img class="search__btn-icon" src="./images/search.svg" alt="Search"/>
+                </button>
+              </form>
+            </nav>
+          </div>
+        </div>
+      </header>

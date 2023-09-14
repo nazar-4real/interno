@@ -1,0 +1,81 @@
+@use "../core/vars";
+@use "../core/mixins";
+
+// FAQ section
+.faq-section {
+  
+  & + & {
+    padding-top: 50px;
+  }
+
+  &__body > .main-title {
+    max-width: 683px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+
+  &__content {
+    @include mixins.flexBox(center, space-between);
+    gap: 60px;
+  }
+
+  &__questions,
+  &__figure {
+    flex: 0 1 50%;
+  }
+
+  &__question {
+    padding-bottom: 36px;
+    border-bottom: 1px solid vars.$sandy;
+
+    & + & {
+      margin-top: 20px;
+    }
+
+    &-title {
+      font-size: 25px;
+      line-height: 37.5px;
+      position: relative;
+      padding-right: 10px;
+      transition: .5s;
+    }
+
+    &-title::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%) rotate(45deg);
+      border-top: 3px solid vars.$dark;
+      border-right: 3px solid vars.$dark;
+      border-radius: 3px;
+      transition: 0.5s;
+    }
+
+    &.open {
+      .faq-section__question-title {
+        color: vars.$sandy;
+      }
+
+      .faq-section__question-title::after {
+        transform: translateY(-50%) rotate(135deg);
+      }
+
+      .faq-section__question-text {
+        margin-top: 13px;
+      }
+    }
+  }
+
+  &__figure {
+    border-radius: 40px;
+  }
+
+  &__img {
+    @include mixins.dimensions100;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+}

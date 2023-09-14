@@ -1,0 +1,101 @@
+@use '../core/vars';
+@use '../core/mixins';
+
+.wrapper:has(#not-found-page) .footer {
+  display: none;
+}
+
+// Not found
+
+.not-found {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+
+  &__body {
+    @include mixins.flexBox(center, space-between);
+    height: 82vmin;
+
+    @media (width <= 991px) {
+      flex-direction: column;
+      gap: 50px;
+      height: auto;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__info {
+    max-width: 569px;
+
+    @media (width <= 991px) {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-size: 250px;
+    line-height: 175px;
+    margin-bottom: 15px;
+    color: vars.$sandy;
+
+    @media (width <= 1024px) {
+      font-size: 200px;
+      line-height: 140px;
+    }
+
+    @media (width <= 991px) {
+      font-size: 150px;
+      line-height: 120px;
+    }
+
+    @media (width <= 767px) {
+      font-size: 90px;
+      line-height: 60px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 35px;
+    line-height: 52.5px;
+    letter-spacing: 0.01em;
+    margin-bottom: 40px;
+
+    @media (width <= 767px) {
+      font-size: 28px;
+      line-height: 43px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__figure {
+    height: 100%;
+    width: 48%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0px 0px 0px 353px;
+
+    @media (width <= 1024px) {
+      border-radius: 0px 0px 0px 200px;
+    }
+
+    @media (width <= 991px) {
+      position: static;
+      border-radius: 50px;
+      width: 100%;
+      height: 70vmin;
+    }
+
+    @media (width <= 767px) {
+      border-radius: 20px;
+    }
+  }
+
+  &__img {
+    @include mixins.dimensions100;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+}

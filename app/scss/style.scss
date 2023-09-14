@@ -1,0 +1,837 @@
+@use 'core/base';
+
+// Hero
+
+.hero {
+  padding-top: 0;
+
+  .container,
+  &__body {
+    height: 100%;
+  }
+
+  &__body {
+    @include base.flexBox(flex-start, center);
+    flex-direction: column;
+    background: url(../images/hero/hero-bg.jpg) center / cover no-repeat;
+    border-radius: 70px;
+    padding: 52px;
+    height: clamp(450px, 100vmin, 758px);
+    position: relative;
+    overflow: hidden;
+
+    @media (width <= 767px) {
+      padding: 52px 30px;
+      border-radius: 25px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        backdrop-filter: blur(7px);
+      }
+    }
+  }
+
+  &__info {
+    position: relative;
+    max-width: 434px;
+  }
+
+  .main-title {
+    margin-bottom: 18px;
+    font-size: 65px;
+    line-height: 81px;
+
+    @media (width <= 1440px) {
+      font-size: 55px;
+      line-height: 70px;
+    }
+
+    @media (width <= 991px) {
+      font-size: 55px;
+      line-height: 67px;
+      text-align: left;
+    }
+
+    @media (width <= 767px) {
+      font-size: 45px;
+      line-height: 57px;
+    }
+
+    @media (width <= 767px) {
+      font-size: 35px;
+      line-height: 44px;
+    }
+  }
+
+  .main-text {
+    margin-bottom: 21px;
+  }
+
+  & + .work {
+    padding-top: 17px;
+  }
+}
+
+// Work
+
+.work {
+  overflow: hidden;
+  padding: 117px 0 17px;
+
+  &__cards {
+    @include base.flexBox(center, space-between);
+    flex-wrap: wrap;
+    gap: 0 20px;
+
+    @media (width <= 767px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px 0;
+    }
+  }
+
+  &__card {
+    flex: 1 0 358px;
+    text-align: center;
+    padding: 83px 20px 57px;
+    border-radius: 30px;
+    transition: background 0.5s;
+
+    &:hover {
+      background: base.$light;
+    }
+
+    @media (width <= 1440ppx) {
+      padding: 65px 20px 45px;
+    }
+
+    @media (width <= 767px) {
+      flex: unset;
+    }
+  }
+
+  .main-title {
+    font-size: 25px;
+    line-height: 31px;
+    margin-bottom: 20px;
+  }
+
+  .main-text {
+    margin-bottom: 26px;
+
+    @media (width <= 767px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (not (hover)) {
+    .main-link {
+      border-bottom: 2px solid base.$darkGray;
+      border-radius: 0;
+    }
+  }
+}
+
+// About
+
+.about {
+  overflow: hidden;
+
+  &__body {
+    @include base.flexBox(center, space-between);
+    gap: 30px;
+
+    @media (width <= 991px) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    max-width: 472px;
+
+    @media (width <= 991px) {
+      max-width: 100%;
+    }
+
+    .main-title {
+      max-width: 420px;
+      margin-bottom: 33px;
+
+      @media (width <= 991px) {
+        max-width: 100%;
+      }
+    }
+
+    .main-text {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__contact {
+    @include base.flexBox(center);
+    gap: 15px;
+    margin-bottom: 47px;
+
+    @media (width <= 767px) {
+      margin-bottom: 35px;
+    }
+
+    &-icon {
+      width: 93px;
+      height: 93px;
+      object-fit: contain;
+
+      @media (width <= 1440px) {
+        width: 70px;
+        height: 70px;
+      }
+
+      @media (width <= 767px) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &:hover &-icon {
+      animation: shake 0.7s ease-in;
+    }
+
+    &-info {
+      @include base.flexBox(flex-start, center);
+      gap: 3px;
+      flex-direction: column;
+    }
+
+    &-number {
+      @include base.insertFont(24px, 26px, 700);
+      letter-spacing: 0.01em;
+
+      @media (width <= 1440px) {
+        font-size: 20px;
+        line-height: 23px;
+      }
+
+      @media (width <= 767px) {
+        font-size: 22px;
+        line-height: 24px;
+      }
+    }
+
+    &-descr.main-text {
+      margin-bottom: 0;
+    }
+  }
+
+  &__picture {
+    flex: 0 1 653px;
+    height: min(700px, 90vmin);
+    border-radius: 0 326.5px 0 123px;
+    overflow: hidden;
+
+    @media (width <= 1440px) {
+      border-radius: 0 240px 0 100px;
+    }
+
+    @media (width <= 991px) {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    @media (width <= 767px) {
+      border-radius: 25px;
+      flex-basis: auto;
+    }
+
+    &-img {
+      @include base.dimensions100;
+      object-fit: cover;
+    }
+  }
+}
+
+// Testimonial
+
+.testimonial {
+  &__body {
+    padding: 88px 25px;
+    background: base.$light;
+    border-radius: 70px;
+
+    @media (width <= 767px) {
+      padding: 50px 25px;
+      border-radius: 25px;
+    }
+
+    @media (width <= 575px) {
+      padding: 40px 0;
+    }
+  }
+
+  &__body > .main-title {
+    text-align: center;
+    max-width: 547px;
+    margin: 0 auto 38px;
+  }
+
+  &__cards {
+    @include base.flexBox(stretch, space-between);
+    flex-wrap: wrap;
+    gap: 20px 0;
+
+    @media (width <= 1105px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      grid-gap: 20px;
+    }
+
+    @media (width <= 767px) {
+      grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+      grid-gap: 15px;
+    }
+  }
+
+  &__card {
+    background: base.$white;
+    border-radius: 30px;
+    padding: 53px 37px;
+    flex: 0 1 32%;
+
+    @media (width <= 767px) {
+      padding: 40px 30px;
+      border-radius: 25px;
+    }
+
+    &-caption {
+      @include base.flexBox(center, flex-start);
+      gap: 23px;
+      margin-bottom: 25px;
+
+      @media (width <= 767px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-img {
+      width: 77px;
+      height: 77px;
+      object-fit: cover;
+      border-radius: 50px;
+
+      @media (width <= 767px) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &-personal {
+      @include base.flexBox(flex-start, center);
+      flex-direction: column;
+    }
+
+    &-name.main-title {
+      font-size: 25px;
+      line-height: 37px;
+      margin-bottom: 0;
+
+      @media (width <= 767px) {
+        font-size: 22px;
+        line-height: 33px;
+      }
+    }
+
+    &-descr.main-text {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+}
+
+// Partners
+
+.partners {
+  padding: 50px 0;
+  overflow: hidden;
+
+  &__items {
+    @include base.flexBox(center, space-between);
+    gap: 40px;
+
+    @media (width <= 1024px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      justify-items: center;
+      grid-gap: 30px;
+    }
+
+    @media (width <= 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    max-width: 163px;
+    height: 103px;
+    user-select: none;
+
+    @media (width <= 480px) {
+      max-width: 170px;
+    }
+
+    &-img {
+      @include base.dimensions100;
+      object-fit: contain;
+    }
+  }
+}
+
+// Projects
+
+.projects {
+  overflow: hidden;
+
+  &__caption {
+    text-align: center;
+    max-width: 737px;
+    margin: 0 auto 93px;
+
+    .main-title {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 56px 104px;
+
+    @media (width <= 1199px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px 60px;
+    }
+
+    @media (width <= 1024px) {
+      grid-gap: 40px 60px;
+    }
+
+    @media (width <= 767px) {
+      grid-gap: 30px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-bottom: 25px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: linear-gradient(90deg, base.$sandy, base.$darkGray);
+      transition: transform 0.5s;
+      transform-origin: right;
+      transform: scaleX(0);
+
+      @media (not (hover)) {
+        transform: scaleX(1);
+      }
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    &-picture {
+      width: 100%;
+      height: 548px;
+      margin-bottom: 24px;
+      overflow: hidden;
+
+      @media (width <= 1199px) {
+        height: 380px;
+      }
+
+      @media (width <= 991px) {
+        height: 465px;
+      }
+
+      @media (width <= 767px) {
+        height: 400px;
+        margin-bottom: 15px;
+      }
+    }
+
+    &:nth-child(1) &-picture {
+      border-top-right-radius: 80px;
+    }
+
+    &:nth-child(2) &-picture {
+      border-top-left-radius: 80px;
+    }
+
+    &:nth-child(3) &-picture {
+      border-bottom-right-radius: 80px;
+    }
+
+    &:nth-child(4) &-picture {
+      border-bottom-left-radius: 80px;
+    }
+
+    @media (width <= 767px) {
+      &:nth-child(1) &-picture {
+        border-top-right-radius: 40px;
+      }
+
+      &:nth-child(2) &-picture {
+        border-top-left-radius: 40px;
+      }
+
+      &:nth-child(3) &-picture {
+        border-bottom-right-radius: 40px;
+      }
+
+      &:nth-child(4) &-picture {
+        border-bottom-left-radius: 40px;
+      }
+    }
+
+    &-img {
+      @include base.dimensions100;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    &:hover &-img {
+      transform: scale(1.2);
+
+      @media (not (hover)) {
+        transform: unset;
+      }
+    }
+
+    &-info {
+      @include base.flexBox(center, space-between);
+    }
+
+    &-text {
+      @include base.flexBox(flex-start, center);
+      flex-direction: column;
+      gap: 4px;
+
+      @media (width <= 767px) {
+        gap: 0;
+      }
+    }
+
+    &-name {
+      font-size: 25px;
+      line-height: 31px;
+
+      @media (width <= 767px) {
+        font-size: 21px;
+        line-height: 26px;
+      }
+    }
+
+    &-descr {
+      font-size: 22px;
+      line-height: 33px;
+
+      @media (width <= 767px) {
+        font-size: 20px;
+        line-height: 29px;
+      }
+    }
+
+    &-icon {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      transition: border-color 0.5s;
+
+      @media (width <= 767px) {
+        width: 55px;
+        height: 55px;
+      }
+    }
+
+    &-text:has(&-name:hover) + &-icon {
+      border-color: base.$dark;
+    }
+  }
+}
+
+// Counter
+
+.counter {
+  background: base.$light;
+  margin: 100px 0;
+  overflow: hidden;
+
+  @media (width <= 767px) {
+    margin: 0;
+  }
+
+  @media (width <= 850px) {
+    padding: 0;
+  }
+
+  &__items {
+    @include base.flexBox(center, center);
+
+    @media (width <= 850px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 -15px;
+    }
+
+    @media (width <= 480px) {
+      grid-template-columns: 1fr;
+      margin: 0;
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    &:not(:last-child) {
+      padding-right: 76px;
+      margin-right: 76px;
+      border-right: 1px solid base.$sandy;
+    }
+
+    @media (width <= 850px) {
+      &:is(:not(:last-child), :last-child) {
+        height: 100%;
+        padding: 60px;
+        margin: 0;
+        border: 0.5px solid base.$sandy;
+      }
+
+      &:nth-child(1) {
+        border-top: none;
+        border-left: none;
+      }
+
+      &:nth-child(2) {
+        border-top: none;
+        border-right: none;
+      }
+
+      &:nth-child(3) {
+        border-bottom: none;
+        border-left: none;
+      }
+
+      &:nth-child(4) {
+        border-bottom: none;
+        border-right: none;
+      }
+    }
+
+    @media (width <= 480px) {
+      &:is(:not(:last-child), :last-child) {
+        border-width: 1px;
+        padding: 40px 0;
+      }
+
+      &:nth-child(3) {
+        border-top: none;
+        border-bottom: 1px solid base.$sandy;
+      }
+
+      &:nth-child(4) {
+        border-top: none;
+      }
+    }
+
+    &-number {
+      @include base.insertFont(85px, 90px, 400px, 'DMSerifDisplay');
+      color: base.$sandy;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+// Blog
+
+.blog {
+  overflow: hidden;
+
+  &__caption {
+    text-align: center;
+    max-width: 811px;
+    margin: 0 auto 52px;
+  }
+
+  .main-title {
+    margin-bottom: 12px;
+  }
+
+  &__articles {
+    @include base.flexBox(center, center);
+    gap: 27px;
+    flex-wrap: wrap;
+  }
+
+  &__article {
+    padding: 21px 21px 37px;
+    border: 1px solid base.$dimmed;
+    filter: drop-shadow(0px 10px 30px rgba(255, 255, 255, 0.25));
+    border-radius: 62px;
+    flex: 0 1 382px;
+    transition: background 0.5s;
+
+    @media (width <= 767px) {
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    @media (width <= 575px) {
+      flex-grow: 1;
+    }
+
+    &:hover {
+      background: base.$light;
+    }
+
+    &-figure {
+      border-radius: 45px 45px 0 0;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 21px;
+      height: 290px;
+
+      @media (width <= 767px) {
+        border-radius: 25px 25px 0 0;
+      }
+
+      @media (width <= 575px) {
+        border-radius: 15px 15px 0 0;
+      }
+    }
+
+    &-img,
+    &-figlink {
+      @include base.dimensions100;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    &:hover &-img {
+      transform: scale(1.2);
+    }
+
+    &-figcaption {
+      padding: 12px;
+      background: base.$white;
+      border-radius: 8px 8px 8px 0;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1;
+    }
+
+    &-title {
+      font-size: 25px;
+      line-height: 31px;
+    }
+
+    &-footer {
+      @include base.flexBox(center, space-between);
+      margin-top: 30px;
+
+      @media (width <= 767px) {
+        margin-top: 15px;
+      }
+    }
+
+    .main-text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    svg {
+      width: 52px;
+      height: 52px;
+    }
+
+    svg * {
+      transition: fill 0.5s;
+    }
+
+    svg circle {
+      stroke: base.$darkGray;
+      stroke-dasharray: 213;
+      stroke-dashoffset: 213;
+      transition: 0.8s;
+    }
+
+    &:hover svg circle {
+      fill: base.$white;
+    }
+
+    &:has(&-title:hover) svg circle {
+      stroke: base.$darkGray;
+      fill: base.$white;
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+// Contact
+
+.contact {
+  &__body {
+    overflow: hidden;
+    padding: 80px;
+    background: base.$dark;
+    border-radius: 70px;
+
+    @media (width <= 767px) {
+      padding: 50px 30px 70px;
+      border-radius: 25px;
+    }
+  }
+
+  &__info {
+    text-align: center;
+    max-width: 570px;
+    margin: 0 auto;
+
+    @media (width <= 767px) {
+      max-width: 100%;
+    }
+  }
+
+  .main-title,
+  .main-text {
+    color: base.$white;
+  }
+
+  .main-title {
+    margin-bottom: 11px;
+  }
+
+  .main-text {
+    margin-bottom: 32px;
+  }
+
+  .main-link {
+    background: base.$sandy;
+    padding: 26px 37px;
+    box-shadow: 0px 10px 20px #1f2022;
+
+    svg path {
+      stroke: base.$dark;
+    }
+  }
+}

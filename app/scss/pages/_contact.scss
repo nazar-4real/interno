@@ -1,0 +1,67 @@
+@use '../core/vars';
+@use '../core/mixins';
+
+// Connect
+.connect {
+  padding: 200px 0 150px;
+
+  @media (width <= 1024px) {
+    padding-top: 100px;
+  }
+
+  @media (width <= 767px) {
+    padding-top: 70px;
+  }
+
+  .main-title {
+    width: min(680px, 100%);
+    margin: 0 auto 80px;
+    text-align: center;
+  }
+
+  &__content {
+    @include mixins.flexBox(flex-start);
+    gap: 55px;
+  }
+
+  &__aside {
+    flex: 0 1 350px;
+    padding: 76px 43px;
+    background: vars.$light;
+    border-radius: 50px;
+
+    &-link + &-link {
+      margin-top: 30px;
+    }
+
+    &-link svg circle {
+      fill: vars.$white;
+    }
+
+    &-social {
+      margin-top: 47px;
+      gap: 35px;
+    }
+  }
+
+  .mailbox__submit {
+    justify-self: end;
+    margin: 0;
+  }
+}
+
+.map {
+  padding-bottom: 100px;
+
+  &__body {
+    height: 501px;
+    overflow: hidden;
+    border-radius: 70px;
+  }
+
+  &__figure,
+  &__img {
+    @include mixins.dimensions100;
+    object-fit: cover;
+  }
+}

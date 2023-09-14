@@ -1,0 +1,11 @@
+@use '../core/vars';
+@use '../core/mixins';
+
+.changelog {
+  margin: 100px 0;
+
+  &__body {
+    gap: 25px;
+    height: 327px;
+  }
+}

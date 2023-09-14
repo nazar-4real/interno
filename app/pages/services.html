@@ -1,0 +1,210 @@
+{% set title = 'Services' %}
+{% set icon = 'images/favicon.svg' %}
+{% from 'templates/page-caption.html' import pageCaption as pageCaption %}
+
+{% include 'components/_header.html' %}
+
+<main class="main" id="services-page">
+
+  {{ pageCaption('services-hero', 'Services', 'services-page/services-bg.jpg', [
+    {
+      linkName: 'Home',
+      linkUrl: '/'
+    }
+  ]) }}
+
+  <section class="work">
+    <div class="container">
+      <div class="work__body">
+        <div class="work__cards">
+          <div class="work__card">
+            <h3 class="work__card-title main-title">
+              Project Plan
+            </h3>
+            <p class="work__card-text main-text">
+              There are many variations of the passages of lorem Ipsum from available, majority.
+            </p>
+            <a class="main-link bgless" href="service.html">
+              Read More {% include 'images/arrow-right.svg' %}
+            </a>
+          </div>
+          <div class="work__card">
+            <h3 class="work__card-title main-title">
+              Interior Work
+            </h3>
+            <p class="work__card-text main-text">
+              There are many variations of the passages of lorem Ipsum from available, majority.
+            </p>
+            <a class="main-link bgless" href="service.html">
+              Read More {% include 'images/arrow-right.svg' %}
+            </a>
+          </div>
+          <div class="work__card">
+            <h3 class="work__card-title main-title">
+              Retail Design
+            </h3>
+            <p class="work__card-text main-text">
+              There are many variations of the passages of lorem Ipsum from available, majority.
+            </p>
+            <a class="main-link bgless" href="service.html">
+              Read More {% include 'images/arrow-right.svg' %}
+            </a>
+          </div>
+          <div class="work__card">
+            <h3 class="work__card-title main-title">
+              2d/3d Art Work
+            </h3>
+            <p class="work__card-text main-text">
+              There are many variations of the passages of lorem Ipsum from available, majority.
+            </p>
+            <a class="main-link bgless" href="service.html">
+              Read More {% include 'images/arrow-right.svg' %}
+            </a>
+          </div>
+          <div class="work__card">
+            <h3 class="work__card-title main-title">
+              Interior Work
+            </h3>
+            <p class="work__card-text main-text">
+              There are many variations of the passages of lorem Ipsum from available, majority.
+            </p>
+            <a class="main-link bgless" href="service.html">
+              Read More {% include 'images/arrow-right.svg' %}
+            </a>
+          </div>
+          <div class="work__card">
+            <h3 class="work__card-title main-title">
+              Decoration Work
+            </h3>
+            <p class="work__card-text main-text">
+              There are many variations of the passages of lorem Ipsum from available, majority.
+            </p>
+            <a class="main-link bgless" href="service.html">
+              Read More {% include 'images/arrow-right.svg' %}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="container">
+      <div class="process__body">
+        <div class="process__caption">
+          <h2 class="main-title">
+            How We Work
+          </h2>
+          <p class="main-text">
+            It is a long established fact will be distracted.Lorem Ipsum is simply dummy text of the printing and
+            typesetting
+            industry.
+          </p>
+        </div>
+        <div class="process__rows">
+          <div class="process__row">
+            <figure class="process__row-figure">
+              <img class="process__row-img" src="images/services-page/process/concept.jpg" alt="Concept & Details" />
+            </figure>
+            <div class="process__row-info">
+              <div class="process__row-heading">
+                <img class="process__row-icon" src="images/services-page/process/concept-icon.svg" alt="Concept icon" />
+                <span class="process__row-number">01</span>
+              </div>
+              <h3 class="main-title">
+                Concept & Details
+              </h3>
+              <p class="main-text">
+                It is a long established fact will be distracted. Lorem Ipsum is simply dummy from text of the and
+                typesetting
+                indufstry.
+              </p>
+            </div>
+          </div>
+
+          <div class="process__row">
+            <div class="process__row-info">
+              <div class="process__row-heading">
+                <img class="process__row-icon" src="images/services-page/process/idea-icon.svg" alt="Idea icon" />
+                <span class="process__row-number">02</span>
+              </div>
+              <h3 class="main-title">
+                Idea for Work
+              </h3>
+              <p class="main-text">
+                It is a long established fact will be distracted. Lorem Ipsum is simply dummy from text of the and
+                typesetting
+                indufstry.
+              </p>
+            </div>
+            <figure class="process__row-figure">
+              <img class="process__row-img" src="images/services-page/process/idea.jpg" alt="Idea for Work" />
+            </figure>
+          </div>
+
+          <div class="process__row">
+            <figure class="process__row-figure">
+              <img class="process__row-img" src="images/services-page/process/design.jpg" alt="Design" />
+            </figure>
+            <div class="process__row-info">
+              <div class="process__row-heading">
+                <img class="process__row-icon" src="images/services-page/process/design-icon.svg" alt="Design icon" />
+                <span class="process__row-number">03</span>
+              </div>
+              <h3 class="main-title">
+                Design
+              </h3>
+              <p class="main-text">
+                It is a long established fact will be distracted. Lorem Ipsum is simply dummy from text of the and
+                typesetting
+                indufstry.
+              </p>
+            </div>
+          </div>
+
+          <div class="process__row">
+            <div class="process__row-info">
+              <div class="process__row-heading">
+                <img class="process__row-icon" src="images/services-page/process/perfection-icon.svg"
+                  alt="Perfection icon" />
+                <span class="process__row-number">04</span>
+              </div>
+              <h3 class="main-title">
+                Perfection
+              </h3>
+              <p class="main-text">
+                It is a long established fact will be distracted. Lorem Ipsum is simply dummy from text of the and
+                typesetting
+                indufstry.
+              </p>
+            </div>
+            <figure class="process__row-figure">
+              <img class="process__row-img" src="images/services-page/process/perfection.jpg" alt="perfection" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__body">
+        <div class="contact__info">
+          <h2 class="main-title">
+            Wanna join the interno?
+          </h2>
+          <p class="main-text">
+            It is a long established fact will be distracted.
+          </p>
+          <a class="main-link" href="#">
+            Contact With Us {% include 'images/arrow-right.svg' %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{% include 'components/_footer.html' %}

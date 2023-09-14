@@ -1,0 +1,345 @@
+{% set title = 'Teammate' %}
+{% set icon = 'images/favicon.svg' %}
+{% from 'templates/page-caption.html' import pageCaption as pageCaption %}
+
+{% include 'components/_header.html' %}
+
+<main class="main" id="teammate-page">
+
+  {{ pageCaption('teammate-hero', 'Professional Single', 'teammate-page/teammate-bg.jpg', [
+    {
+      linkName: 'Home',
+      linkUrl: '/'
+    }
+  ], 'Teammate') }}
+
+  <section class="profile">
+    <div class="container">
+      <div class="profile__body">
+        <figure class="profile__figure">
+          <img class="profile__img" src="images/teammate-page/profile.jpg" alt="Profile">
+        </figure>
+        <div class="profile__info">
+          <h2 class="profile__title main-title">
+            John Smith
+          </h2>
+          <p class="profile__position main-text">
+            Designer
+          </p>
+          <p class="main-text">
+            Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrpobelie frandomised words which don't look even slightly believable.
+          </p>
+          <div class="profile__contacts">
+            <a class="profile__contacts-link main-text " href="mailto:info@yourdomain.com">
+              {% include 'images/envelope.svg' %}
+              <span class="hover-link">
+                info@yourdomain.com
+              </span>
+            </a>
+            <a class="profile__contacts-link main-text " href="tel:+13784001234">
+              {% include 'images/phone.svg' %}
+              <span class="hover-link">
+                +1 (378) 400-1234
+              </span>
+            </a>
+            <a class="profile__contacts-link main-text" href="#">
+              {% include 'images/site.svg' %}
+              <span class=" hover-link">
+                www.yourdomain.com
+              </span>
+            </a>
+            <div class="profile__social social">
+              <a class="social__item facebook" href="#">
+                {% include 'images/social/facebook.svg' %}
+              </a>
+              <a class="social__item twitter" href="#">
+                {% include 'images/social/twitter.svg' %}
+              </a>
+              <a class="social__item linkedin" href="#">
+                {% include 'images/social/linkedin.svg' %}
+              </a>
+              <a class="social__item instagram" href="#">
+                {% include 'images/social/instagram.svg' %}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bio">
+    <div class="container">
+      <div class="bio__body">
+        <div class="bio__caption">
+          <h2 class="main-title">
+            Short Biography​
+          </h2>
+          <p class="main-text">
+            Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, njecthumour randomised words which don't look even slightly believable.
+          </p>
+          <p class="main-text">
+            Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined but the majority have suffered alteration in some form chunks as necessary.
+          </p>
+        </div>
+        <div class="bio__details">
+          <div class="bio__col bio-simplicity">
+            <h4 class="main-title">
+              Simplicity and Functionality
+            </h4>
+            <p class="main-text">
+              Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in belief.
+            </p>
+            <p class="main-text">
+              There are many variations of passages of Lorem Ipsum from available, but the majority have suffered alteration in some form, njecthumour
+            </p>
+            <div class="skillbox">
+              <div class="skillbox__item">
+                <h4 class="skillbox__name main-text">
+                  Project Design
+                </h4>
+                <div class="skillbox__bar" data-percent="65">
+                  <span class="skillbox__progress">
+                    <span class="skillbox__progress-tooltip"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="skillbox__item">
+                <h4 class="skillbox__name main-text">
+                  Team Management
+                </h4>
+                <div class="skillbox__bar" data-percent="95">
+                  <span class="skillbox__progress">
+                    <span class="skillbox__progress-tooltip"></span>
+                  </span>
+                </div>
+              </div>
+              <div class="skillbox__item">
+                <h4 class="skillbox__name main-text">
+                  Client Satisfaction
+                </h4>
+                <div class="skillbox__bar" data-percent="75">
+                  <span class="skillbox__progress">
+                    <span class="skillbox__progress-tooltip"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bio__col bio-faq">
+            <h4 class="main-title">
+              Qustion And Answer
+            </h4>
+            <p class="main-text">
+              Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.
+            </p>
+            <div class="questions">
+              <div class="question open">
+                <div class="question__caption">
+                  <h4 class="question__title">
+                    Website & Mobile App Design?
+                  </h4>
+                  <span class="question__icon">
+                    <span></span>
+                    <span></span>
+                  </span>
+                </div>
+                <div class="question__text main-text">
+                  <p>
+                    Lorem ipsum dolor sit amet, adipiscing fromAliquam eu sem turpmaximus.
+                  </p>
+                </div>
+              </div>
+              <div class="question">
+                <div class="question__caption">
+                  <h4 class="question__title">
+                    How to Easy Successful Projects?
+                  </h4>
+                  <span class="question__icon">
+                    <span></span>
+                    <span></span>
+                  </span>
+                </div>
+                <div class="question__text main-text">
+                  <p>
+                    Lorem ipsum dolor sit amet, adipiscing fromAliquam eu sem turpmaximus.
+                    Lorem ipsum dolor sit amet, adipiscing fromAliquam eu sem turpmaximus.
+                    Lorem ipsum dolor sit amet, adipiscing fromAliquam eu sem turpmaximus.
+                  </p>
+                </div>
+              </div>
+              <div class="question">
+                <div class="question__caption">
+                  <h4 class="question__title">
+                    International Trade Experience?
+                  </h4>
+                  <span class="question__icon">
+                    <span></span>
+                    <span></span>
+                  </span>
+                </div>
+                <div class="question__text main-text">
+                  <p>
+                    Lorem ipsum dolor sit amet, adipiscing fromAliquam eu sem turpmaximus.
+                    Lorem ipsum dolor sit amet, adipiscing fromAliquam eu sem turpmaximus.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="container">
+      <div class="team__body">
+        <h2 class="main-title">
+          Our Team Members
+        </h2>
+        <div class="team__cards">
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-1.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-back">
+              <h4 class="main-title team__card-title">Charlotte Levi</h4>
+              <p class="main-text team__card-descr">Design, Australia</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+                <a class="social__item linkedin" href="#">
+                  {% include 'images/social/linkedin.svg' %}
+                </a>
+                <a class="social__item instagram" href="#">
+                  {% include 'images/social/instagram.svg' %}
+                </a>
+              </div>
+              <a class="team__card-phone hover-link" href="tel:+13784001234">+1 (214) 567-5684</a>
+              <a class="team__card-email hover-link" href="mailto:julie@email.com">greg.verton@email.com</a>
+            </div>
+          </div>
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-2.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-back">
+              <h4 class="main-title team__card-title">Nattasha Julie</h4>
+              <p class="main-text team__card-descr">Design, Australia</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+                <a class="social__item linkedin" href="#">
+                  {% include 'images/social/linkedin.svg' %}
+                </a>
+                <a class="social__item instagram" href="#">
+                  {% include 'images/social/instagram.svg' %}
+                </a>
+              </div>
+              <a class="team__card-phone hover-link" href="tel:+13784001234">+1 (378) 400-1234</a>
+              <a class="team__card-email hover-link" href="mailto:julie@email.com">julie@email.com</a>
+            </div>
+          </div>
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-3.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-back">
+              <h4 class="main-title team__card-title">John Smith</h4>
+              <p class="main-text team__card-descr">Design, Australia</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+                <a class="social__item linkedin" href="#">
+                  {% include 'images/social/linkedin.svg' %}
+                </a>
+                <a class="social__item instagram" href="#">
+                  {% include 'images/social/instagram.svg' %}
+                </a>
+              </div>
+              <a class="team__card-phone hover-link" href="tel:+13784001234">+1 (756) 293-3984</a>
+              <a class="team__card-email hover-link" href="mailto:julie@email.com">martin.brok@email.com</a>
+            </div>
+          </div>
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-4.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-back">
+              <h4 class="main-title team__card-title">Nora Owen</h4>
+              <p class="main-text team__card-descr">Design, Australia</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+                <a class="social__item linkedin" href="#">
+                  {% include 'images/social/linkedin.svg' %}
+                </a>
+                <a class="social__item instagram" href="#">
+                  {% include 'images/social/instagram.svg' %}
+                </a>
+              </div>
+              <a class="team__card-phone hover-link" href="tel:+13784001234">+1 (093) 345-2903</a>
+              <a class="team__card-email hover-link" href="mailto:julie@email.com">melissa.norvein@email.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="interact">
+    <div class="container">
+      <div class="interact__body">
+        <h2 class="main-title">
+          Contact Me
+        </h2>
+        <form class="mailbox__form" id="mailbox-form">
+          <label class="mailbox__label">
+            <input class="mailbox__input" type="text" name="name" required/>
+            <span class="main-text mark">Name</span>
+          </label>
+          <label class="mailbox__label">
+            <input class="mailbox__input" type="email" name="email" required/>
+            <span class="main-text mark">Email</span>
+          </label>
+          <label class="mailbox__label">
+            <textarea class="mailbox__input textarea" name="comment" required></textarea>
+            <span class="main-text mark">Sent Your Message</span>
+          </label>
+          <label class="mailbox__label consent">
+            <div class="checkbox">
+              <input type="checkbox" name="agree" required>
+            </div>
+            <span>
+              Save my name, email, and website in this browser for the next time I comment.
+            </span>
+          </label>
+          <button class="main-link mailbox__submit" type="submit">
+            Send Now
+            {% include 'images/arrow-right.svg' %}
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{% include 'components/_footer.html' %}

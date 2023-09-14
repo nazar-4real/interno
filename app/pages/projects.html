@@ -1,0 +1,197 @@
+{% set title = 'Projects' %}
+{% set icon = 'images/favicon.svg' %}
+{% from 'templates/page-caption.html' import pageCaption as pageCaption %}
+
+{% include 'components/_header.html' %}
+
+<main class="main" id="project-page">
+
+  {{ pageCaption('project-hero', 'Our Projects', 'project-page/project-bg.jpg', [
+    {
+      linkName: 'Home',
+      linkUrl: '/'
+    }
+  ]) }}
+
+  <div class="gallery">
+    <div class="container">
+      <div class="gallery__body">
+        <div class="gallery__tabs">
+          <button class="gallery__tab" data-filter="all">
+            Bathroom
+          </button>
+          <button class="gallery__tab" data-filter=".tab-a">
+            Bed Room
+          </button>
+          <button class="gallery__tab" data-filter=".tab-b">
+            Kitchen
+          </button>
+          <button class="gallery__tab" data-filter=".tab-c">
+            Living Area
+          </button>
+        </div>
+        <div class="gallery__tabs-content" data-active-category="">
+          <div class="gallery__tape">
+            <div class="mix tab-c gallery__item projects__item">
+              <a class="gallery__item-picture projects__item-picture" href="#">
+                <img class="gallery__item-img projects__item-img" src="images/project-page/project-img--1.jpg"
+                  alt="Project"/>
+              </a>
+              <div class="gallery__item-info projects__item-info">
+                <div class="gallery__item-text projects__item-text">
+                  <a class="gallery__item-title projects__item-name main-title" href="#">
+                    Modern Kitchan
+                  </a>
+                  <p class="gallery__item-descr projects__item-descr main-text">
+                    Decor / Artchitecture
+                  </p>
+                </div>
+                <img class="gallery__item projects__item-icon" src="images/arrow-right-bg.svg" alt="Arrow right"/>
+              </div>
+            </div>
+            <div class="mix tab-a gallery__item projects__item">
+              <a class="gallery__item-picture projects__item-picture" href="#">
+                <img class="gallery__item-img projects__item-img" src="images/project-page/project-img--2.jpg"
+                  alt="Project"/>
+              </a>
+              <div class="gallery__item-info projects__item-info">
+                <div class="gallery__item-text projects__item-text">
+                  <a class="gallery__item-title projects__item-name main-title" href="#">
+                    Modern Kitchan
+                  </a>
+                  <p class="gallery__item-descr projects__item-descr main-text">
+                    Decor / Artchitecture
+                  </p>
+                </div>
+                <img class="gallery__item projects__item-icon" src="images/arrow-right-bg.svg" alt="Arrow right"/>
+              </div>
+            </div>
+            <div class="mix tab-b tab-c gallery__item projects__item">
+              <a class="gallery__item-picture projects__item-picture" href="#">
+                <img class="gallery__item-img projects__item-img" src="images/project-page/project-img--3.jpg"
+                  alt="Project"/>
+              </a>
+              <div class="gallery__item-info projects__item-info">
+                <div class="gallery__item-text projects__item-text">
+                  <a class="gallery__item-title projects__item-name main-title" href="#">
+                    Modern Kitchan
+                  </a>
+                  <p class="gallery__item-descr projects__item-descr main-text">
+                    Decor / Artchitecture
+                  </p>
+                </div>
+                <img class="gallery__item projects__item-icon" src="images/arrow-right-bg.svg" alt="Arrow right"/>
+              </div>
+            </div>
+            <div class="mix tab-a tab-c gallery__item projects__item">
+              <a class="gallery__item-picture projects__item-picture" href="#">
+                <img class="gallery__item-img projects__item-img" src="images/project-page/project-img--4.jpg"
+                  alt="Project"/>
+              </a>
+              <div class="gallery__item-info projects__item-info">
+                <div class="gallery__item-text projects__item-text">
+                  <a class="gallery__item-title projects__item-name main-title" href="#">
+                    Modern Kitchan
+                  </a>
+                  <p class="gallery__item-descr projects__item-descr main-text">
+                    Decor / Artchitecture
+                  </p>
+                </div>
+                <img class="gallery__item projects__item-icon" src="images/arrow-right-bg.svg" alt="Arrow right"/>
+              </div>
+            </div>
+          </div>
+          <div class="gallery__tape">
+            <div class="mix tab-b gallery__item projects__item">
+              <a class="gallery__item-picture projects__item-picture" href="#">
+                <img class="gallery__item-img projects__item-img" src="images/project-page/project-img--5.jpg"
+                  alt="Project"/>
+              </a>
+              <div class="gallery__item-info projects__item-info">
+                <div class="gallery__item-text projects__item-text">
+                  <a class="gallery__item-title projects__item-name main-title" href="#">
+                    Modern Kitchan
+                  </a>
+                  <p class="gallery__item-descr projects__item-descr main-text">
+                    Decor / Artchitecture
+                  </p>
+                </div>
+                <img class="gallery__item projects__item-icon" src="images/arrow-right-bg.svg" alt="Arrow right"/>
+              </div>
+            </div>
+            <div class="mix tab-c tab-a gallery__item projects__item">
+              <a class="gallery__item-picture projects__item-picture" href="#">
+                <img class="gallery__item-img projects__item-img" src="images/project-page/project-img--6.jpg"
+                  alt="Project"/>
+              </a>
+              <div class="gallery__item-info projects__item-info">
+                <div class="gallery__item-text projects__item-text">
+                  <a class="gallery__item-title projects__item-name main-title" href="#">
+                    Modern Kitchan
+                  </a>
+                  <p class="gallery__item-descr projects__item-descr main-text">
+                    Decor / Artchitecture
+                  </p>
+                </div>
+                <img class="gallery__item projects__item-icon" src="images/arrow-right-bg.svg" alt="Arrow right"/>
+              </div>
+            </div>
+            <div class="mix tab-b gallery__item projects__item">
+              <a class="gallery__item-picture projects__item-picture" href="#">
+                <img class="gallery__item-img projects__item-img" src="images/project-page/project-img--7.jpg"
+                  alt="Project"/>
+              </a>
+              <div class="gallery__item-info projects__item-info">
+                <div class="gallery__item-text projects__item-text">
+                  <a class="gallery__item-title projects__item-name main-title" href="#">
+                    Modern Kitchan
+                  </a>
+                  <p class="gallery__item-descr projects__item-descr main-text">
+                    Decor / Artchitecture
+                  </p>
+                </div>
+                <img class="gallery__item projects__item-icon" src="images/arrow-right-bg.svg" alt="Arrow right"/>
+              </div>
+            </div>
+            <div class="mix tab-c gallery__item projects__item">
+              <a class="gallery__item-picture projects__item-picture" href="#">
+                <img class="gallery__item-img projects__item-img" src="images/project-page/project-img--8.jpg"
+                  alt="Project"/>
+              </a>
+              <div class="gallery__item-info projects__item-info">
+                <div class="gallery__item-text projects__item-text">
+                  <a class="gallery__item-title projects__item-name main-title" href="#">
+                    Modern Kitchan
+                  </a>
+                  <p class="gallery__item-descr projects__item-descr main-text">
+                    Decor / Artchitecture
+                  </p>
+                </div>
+                <img class="gallery__item projects__item-icon" src="images/arrow-right-bg.svg" alt="Arrow right"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="gallery__pagination">
+          <li class="gallery__pagination-item current">
+            <button class="gallery__pagination-btn">01</button>
+          </li>
+          <li class="gallery__pagination-item">
+            <button class="gallery__pagination-btn">02</button>
+          </li>
+          <li class="gallery__pagination-item">
+            <button class="gallery__pagination-btn">03</button>
+          </li>
+          <li class="gallery__pagination-item">
+            <button class="gallery__pagination-btn">
+              {% include 'images/arrow-right-bg.svg' %}
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+{% include 'components/_footer.html' %}

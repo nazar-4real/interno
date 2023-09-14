@@ -1,0 +1,30 @@
+{% set title = 'Changelog' %}
+{% set icon = 'images/favicon.svg' %}
+{% from 'templates/page-caption.html' import pageCaption as pageCaption %}
+
+{% include 'components/_header.html' %}
+
+<main class="main" id="changelog-page">
+
+  {{ pageCaption('changelog-hero', 'Changelog', 'changelog-page/changelog-bg.jpg', [
+    {
+      linkName: 'Home',
+      linkUrl: '/'
+    }
+  ]) }}
+
+  <section class="changelog rounded-section">
+    <div class="container">
+      <div class="changelog__body">
+        <h1 class="main-title">
+          V.1
+        </h1>
+        <p class="main-text">
+          Initial Interno Webflow Template Release
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include 'components/_footer.html' %}

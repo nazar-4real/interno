@@ -1,0 +1,220 @@
+@use 'core/mixins';
+@use 'core/vars';
+
+.header {
+  padding: 52px 0;
+  transition: padding 0.5s, background 0.2s;
+  position: relative;
+
+  @media (width <= 1440px) {
+    padding: 30px 0;
+  }
+
+  @media (width <= 991px) {
+    padding: 30px 0;
+  }
+
+  &.fixed {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: vars.$white;
+    padding: 20px 0;
+    box-shadow: 0 5px 15px 2px rgba(vars.$dark, 0.1);
+
+    .logo {
+      width: 150px;
+    }
+
+    .menu {
+      gap: 40px;
+
+      @media (width >= 991px) {
+        &__item-link {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  &__body {
+    @include mixins.flexBox(center, space-between);
+    gap: 40px;
+  }
+}
+
+.nav-menu {
+  @include mixins.flexBox(center);
+  gap: 31px;
+  margin-left: auto;
+}
+
+.menu {
+  @include mixins.flexBox(baseline);
+  gap: 49px;
+  transition: gap 0.5s;
+
+  &__item-link {
+    @include mixins.insertFont(20px, 25px);
+    color: vars.$dark;
+    transition: 0.5s;
+  }
+
+  @media (width <= 991px) {
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &-wrapper {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      z-index: 20;
+      padding: 65px 0 30px;
+      display: grid;
+      place-items: center;
+      background: vars.$dimmed;
+      transition: right 0.7s ease-out;
+
+      &.open {
+        right: 0;
+      }
+
+      .burger {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+      }
+    }
+
+    &__item-link {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+}
+
+.burger {
+  width: 30px;
+  height: 18px;
+  position: relative;
+  z-index: 30;
+  order: 1;
+  display: none;
+
+  @media (width <= 991px) {
+    display: block;
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 2px;
+    background: vars.$darkGray;
+    transition: 0.5s;
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      transform: translateX(-50%);
+      transform-origin: left;
+    }
+
+    &:nth-child(1) {
+      top: 0;
+      border-radius: 30px 30px 3px 3px;
+    }
+
+    &:nth-child(2) {
+      border-radius: 5px;
+    }
+
+    &:nth-child(3) {
+      top: unset;
+      bottom: 0;
+      border-radius: 3px 3px 30px 30px;
+    }
+  }
+
+  &.go-back span {
+    border-radius: 40% 20% 20% 40%;
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      border-radius: 50%;
+    }
+
+    &:nth-child(2) {
+      border-radius: 45% 1px 1px 45%;
+    }
+
+    &:nth-child(1) {
+      transform: translate(-50%, 8px) scaleX(0.5) rotate(-15deg);
+    }
+
+    &:nth-child(3) {
+      transform: translate(-50%, -8px) scaleX(0.5) rotate(15deg);
+    }
+  }
+}
+
+.search {
+  @include mixins.flexBox(center, center);
+
+  &__field {
+    @include mixins.insertFont(18px, 22px);
+    border-radius: 10px;
+    transition: 0.7s;
+    width: 0;
+    padding: 7px 0;
+    opacity: 0;
+    visibility: hidden;
+    border: 1px solid transparent;
+    background: vars.$white;
+
+    &.open {
+      width: 200px;
+      visibility: visible;
+      opacity: 1;
+      padding: 7px 12px;
+      margin-right: 10px;
+      border-color: vars.$dark;
+    }
+
+    @media (width <= 1100px) {
+      position: absolute;
+      top: 95%;
+      left: 50%;
+      z-index: -1;
+      transform: translate(-50%, -50px);
+      font-size: 24px;
+      line-height: 36px;
+      width: 95% !important;
+      padding: 10px 15px !important;
+
+      &.open {
+        z-index: 10;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    @media (width <= 767px) {
+      top: 90%;
+    }
+  }
+
+  &__btn {
+    width: 21px;
+    height: 21px;
+
+    &-icon {
+      @include mixins.dimensions100;
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{% set title = '404 | Not found' %}
+{% set icon = 'images/favicon.svg' %}
+{% from 'templates/page-caption.html' import pageCaption as pageCaption %}
+
+{% include 'components/_header.html' %}
+
+<main class="main" id="not-found-page">
+
+  <section class="not-found">
+    <div class="container">
+      <div class="not-found__body">
+        <div class="not-found__info">
+          <h1 class="not-found__title main-title">
+            404
+          </h1>
+          <p class="not-found__subtitle main-title">
+            We are sorry, but the page you requested was not found
+          </p>
+          <a class="main-link" href="#">
+            Back To Home
+            {% include 'images/arrow-right.svg' %}
+          </a>
+        </div>
+        <figure class="not-found__figure">
+          <img class="not-found__img" src="images/not-found.jpg" alt="404 | Not found">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{% include 'components/_footer.html' %}

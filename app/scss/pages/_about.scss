@@ -1,0 +1,243 @@
+@use 'core/vars';
+@use 'core/mixins';
+
+#about :is(.activity__img, .result__img) {
+  max-width: 660px;
+}
+
+// Quote
+.quote {
+  padding: 100px 0;
+
+  @media (width <= 767px) {
+    padding: 50px 0;
+  }
+
+  &__body {
+    padding: 67px 62px;
+    max-width: 875px;
+    margin: 0 auto;
+    position: relative;
+
+    @media (width <= 767px) {
+      padding: 67px 40px;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      width: 188px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      border-style: solid;
+      border-color: vars.$light;
+      border-top-width: 25px;
+      border-bottom-width: 25px;
+
+      @media (width <= 767px) {
+        border-width: 15px !important;
+        width: 100px;
+      }
+    }
+
+    &::before {
+      left: 0;
+      border-right: none;
+      border-left-width: 25px;
+      border-top-left-radius: 70px;
+      border-bottom-left-radius: 70px;
+
+      @media (width <= 767px) {
+        border-top-left-radius: 45px;
+        border-bottom-left-radius: 45px;
+      }
+    }
+
+    &::after {
+      right: 0;
+      border-left: none;
+      border-right-width: 25px;
+      border-top-right-radius: 70px;
+      border-bottom-right-radius: 70px;
+
+      @media (width <= 767px) {
+        border-top-right-radius: 45px;
+        border-bottom-right-radius: 45px;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 751px;
+    margin: 0 auto;
+    padding-top: 89px;
+    position: relative;
+    display: block;
+    text-align: center;
+
+    @media (width <= 767px) {
+      padding-top: 50px;
+    }
+
+    &::before {
+      content: '“';
+      @include mixins.insertFont(85px, 106px, 400, 'DMSerifDisplay');
+      font-style: italic;
+      letter-spacing: 0.02em;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @media (width <= 767px) {
+        top: -25px;
+      }
+    }
+
+    p {
+      @include mixins.insertFont(35px, 44px, 400, 'DMSerifDisplay');
+      font-style: italic;
+      letter-spacing: 0.02em;
+      margin-bottom: 34px;
+
+      @media (width <= 767px) {
+        font-size: 26px;
+        line-height: 38px;
+      }
+    }
+
+    cite {
+      @include mixins.insertFont(25px, 38px, 400, 'Jost');
+      font-style: normal;
+      display: inline-block;
+
+      @media (width <= 767px) {
+        font-size: 20px;
+        line-height: 31px;
+      }
+    }
+  }
+}
+
+// Team
+.team {
+  padding: 185px 0 184px;
+  background: vars.$light;
+
+  @media (width <= 991px) {
+    padding: 100px 0;
+  }
+
+  @media (width <= 767px) {
+    padding: 50px 0;
+  }
+
+  .main-title {
+    max-width: 547px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__cards {
+    @include mixins.flexBox(stretch, center);
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 40px;
+  }
+
+  &__card {
+    flex: 0 0 283px;
+    height: 433px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    border-radius: 30px;
+
+    @media (width <= 767px) {
+      flex-grow: 1;
+      height: 480px;
+    }
+
+    &-front,
+    &-back {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      transition: transform 0.8s;
+      border-radius: 30px;
+
+      @media (width <= 575px) {
+        border-radius: 15px;
+      }
+    }
+
+    &-front {
+      overflow: hidden;
+    }
+
+    &-front img {
+      @include mixins.dimensions100;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: inherit;
+      transition: 0.5s;
+    }
+
+    &:hover &-front {
+      transform: rotate3d(0, 1, 0, -0.5turn);
+    }
+
+    &-back {
+      @include mixins.flexBox(center, center);
+      flex-direction: column;
+      transform: rotate3d(0, 1, 0, -0.5turn);
+      background: vars.$white;
+      transform-style: preserve-3d;
+
+      & > * {
+        transform: translateZ(60px);
+      }
+    }
+
+    &:hover &-back {
+      transform: rotate3d(0, 1, 0, -1turn);
+    }
+
+    .main-title {
+      font-size: 25px;
+      line-height: 37.5px;
+    }
+
+    .main-text {
+      margin-bottom: 65px;
+    }
+
+    .social {
+      gap: 33px;
+      margin: 0 0 66px;
+
+      @media (width <= 767px) {
+        margin-bottom: 50px;
+      }
+    }
+
+    &-phone,
+    &-email {
+      @include mixins.insertFont(18px, 27px);
+      color: vars.$darkGray;
+    }
+
+    &-phone {
+      margin-bottom: 7px;
+    }
+  }
+}
+
+// Mailbox form
+.mailbox__form {
+  max-width: 795px;
+  margin: 0 auto;
+}

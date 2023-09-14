@@ -1,0 +1,169 @@
+{% set title = 'Team' %}
+{% set icon = 'images/favicon.svg' %}
+{% from 'templates/page-caption.html' import pageCaption as pageCaption %}
+
+{% include 'components/_header.html' %}
+
+<main class="main" id="team-page">
+
+  {{ pageCaption('team-hero', 'Our Professional', 'team-page/team-bg.jpg', [
+    {
+      linkName: 'Home',
+      linkUrl: '/'
+    }
+  ], 'Team') }}
+
+  <section class="team">
+    <div class="container">
+      <div class="team__body">
+        <div class="team__cards">
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-1.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-info">
+              <h4 class="main-title team__card-title">Charlotte Levi</h4>
+              <p class="main-text team__card-descr">Design, Australia</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-2.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-info">
+              <h4 class="main-title team__card-title">Nattasha Julie</h4>
+              <p class="main-text team__card-descr">Design, Australia</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+                <a class="social__item linkedin" href="#">
+                  {% include 'images/social/linkedin.svg' %}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-3.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-info">
+              <h4 class="main-title team__card-title">John Smith</h4>
+              <p class="main-text team__card-descr">Design, Australia</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-4.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-info">
+              <h4 class="main-title team__card-title">Nora Owen</h4>
+              <p class="main-text team__card-descr">Design, Australia</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-5.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-info">
+              <h4 class="main-title team__card-title">Clarence Lowban</h4>
+              <p class="main-text team__card-descr">QA, Great Britain</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-6.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-info">
+              <h4 class="main-title team__card-title">Sofia Carter</h4>
+              <p class="main-text team__card-descr">QA, Great Britain</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+                <a class="social__item linkedin" href="#">
+                  {% include 'images/social/linkedin.svg' %}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-7.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-info">
+              <h4 class="main-title team__card-title">Colleen Nickleson</h4>
+              <p class="main-text team__card-descr">QA, Great Britain</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="team__card">
+            <figure class="team__card-front">
+              <img src="./images/team/member-8.jpg" alt="Team member"/>
+            </figure>
+            <div class="team__card-info">
+              <h4 class="main-title team__card-title">Gianna Mateo</h4>
+              <p class="main-text team__card-descr">QA, Great Britain</p>
+              <div class="social team__card-social">
+                <a class="social__item facebook" href="#">
+                  {% include 'images/social/facebook.svg' %}
+                </a>
+                <a class="social__item twitter" href="#">
+                  {% include 'images/social/twitter.svg' %}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{% include 'components/_footer.html' %}

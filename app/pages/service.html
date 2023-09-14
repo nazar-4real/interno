@@ -1,0 +1,201 @@
+{% set title = 'Service' %}
+{% set icon = 'images/favicon.svg' %}
+{% from 'templates/page-caption.html' import pageCaption as pageCaption %}
+
+{% include 'components/_header.html' %}
+
+<main class="main" id="service-page">
+
+  {{ pageCaption('service-hero', 'Service Single', 'service-page/service-bg.jpg', [
+    {
+      linkName: 'Home',
+      linkUrl: '/'
+    }
+  ]) }}
+
+  <section class="details">
+    <div class="container">
+      <div class="details__body">
+        <div class="details__caption">
+          <h2 class="details__title main-title">
+            We set the trends of modern living Services.
+          </h2>
+        </div>
+        <div class="details__text main-text">
+          <p>
+            It is a long established fact that a reader will be distracted by the of readable content of a page
+          </p>
+          <p>
+            when lookings at its layouts the points spriof using that it has a more less normal.A wonderful serenity has
+            taken
+            pgossession of my entire soul, like thesce sweet morndsings of sphring which I enjoy with my forwhole heart.
+            I am alone,
+            and feel the charm of excgistence in this spot, which was created for the bliss of souls like mine.
+          </p>
+          <p>
+            when lookings at its layouts the points spriof using that it has a more less normal.A wonderful serenity has
+            taken
+            pgossession of my entire soul, like thesce sweet morndsings of sphring which I enjoy with my forwhole heart.
+            I am alone,
+            and feel the charm of excgistence in this spot, which was created for the bliss of souls like mine.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="partners">
+    <div class="container">
+      <div class="partners__body">
+        <div class="partners__items">
+          <figure class="partners__item">
+            <img class="partners__item-img" src="images/partners/modern-home.svg" alt="Modern Home" />
+          </figure>
+          <figure class="partners__item">
+            <img class="partners__item-img" src="images/partners/stylevintage.svg" alt="Stylevintage" />
+          </figure>
+          <figure class="partners__item">
+            <img class="partners__item-img" src="images/partners/brand.svg" alt="Brand" />
+          </figure>
+          <figure class="partners__item">
+            <img class="partners__item-img" src="images/partners/nature-home.svg" alt="Nature Home" />
+          </figure>
+          <figure class="partners__item">
+            <img class="partners__item-img" src="images/partners/classic-design.svg" alt="Classic Design" />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="video">
+    <div class="container">
+      <div class="video__body">
+        <button class="video__btn">
+          {% include 'images/play.svg' %}
+        </button>
+        <div class="video__popup">
+          <iframe src="https://www.youtube.com/embed/q5dRJxV-yxE" frameborder="0" allowfullcreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="points">
+    <div class="container">
+      <div class="points__body">
+        <div class="points__cols">
+          <div class="points__col">
+            <h3 class="main-title">
+              Use of Interior
+            </h3>
+            <ol class="points__list">
+              <li class="points__list-item main-text">
+                We provide high quality design services.
+              </li>
+              <li class="points__list-item main-text">
+                Project on time and Latest Design.
+              </li>
+              <li class="points__list-item main-text">
+                Scientific Skills For getting a better result.
+              </li>
+              <li class="points__list-item main-text">
+                Renovations Benefit of Service
+              </li>
+              <li class="points__list-item main-text">
+                We are confident about our projects.
+              </li>
+            </ol>
+          </div>
+          <div class="points__col">
+            <h3 class="main-title">
+              Make An Art
+            </h3>
+            <ol class="points__list">
+              <li class="points__list-item main-text">
+                We provide high quality design services.
+              </li>
+              <li class="points__list-item main-text">
+                Project on time and Latest Design.
+              </li>
+              <li class="points__list-item main-text">
+                Scientific Skills For getting a better result.
+              </li>
+              <li class="points__list-item main-text">
+                Renovations Benefit of Service
+              </li>
+              <li class="points__list-item main-text">
+                We are confident about our projects.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="result flexile-section">
+    <div class="container">
+      <div class="result__body flexile-section__content">
+        <figure class="result__img flexile-section__figure">
+          <img src="./images/service-page/result-img.jpg" alt="Interior" />
+        </figure>
+        <div class="result__info flexile-section__info">
+          <h2 class="main-title">
+            We love design.That's how we got here.
+          </h2>
+          <p class="main-text">
+            It is a long established fact that a reader will be distracted by the of readable content .
+          </p>
+          <a class="main-link" href="projects.html">
+            Our Portfolio {% include 'images/arrow-right.svg' %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="counter">
+    <div class="container">
+      <div class="counter__body">
+        <div class="counter__items">
+          <dl class="counter__item">
+            <dt class="counter__item-number" data-counter="12">
+              0
+            </dt>
+            <dd class="counter__item-text main-text">
+              Years Of Experiance
+            </dd>
+          </dl>
+          <dl class="counter__item">
+            <dt class="counter__item-number" data-counter="85">
+              0
+            </dt>
+            <dd class="counter__item-text main-text">
+              Success Project
+            </dd>
+          </dl>
+          <dl class="counter__item">
+            <dt class="counter__item-number" data-counter="15">
+              0
+            </dt>
+            <dd class="counter__item-text main-text">
+              Active Project
+            </dd>
+          </dl>
+          <dl class="counter__item">
+            <dt class="counter__item-number" data-counter="95">
+              0
+            </dt>
+            <dd class="counter__item-text main-text">
+              Happy Customers
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{% include 'components/_footer.html' %}

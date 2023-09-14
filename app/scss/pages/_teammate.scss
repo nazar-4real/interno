@@ -1,0 +1,269 @@
+@use '../core/vars';
+@use '../core/mixins';
+@use '../core/animations';
+
+#teammate-page {
+  .main-text + .main-text {
+    margin-top: 30px;
+  }
+}
+
+// Profile
+.profile {
+  padding: 200px 0 0;
+
+  @media (width <= 991px) {
+    padding-top: 100px;
+  }
+
+  &__body {
+    @include mixins.flexBox(center, center);
+    gap: 59px;
+
+    @media (width <= 991px) {
+      gap: 40px;
+    }
+
+    @media (width <= 830px) {
+      flex-direction: column;
+    }
+  }
+
+  &__figure,
+  &__info {
+    flex: 0 1 50%;
+  }
+
+  &__figure {
+    border-radius: 50px;
+    width: min(400px, 100%);
+
+    @media (width <= 830px) {
+      width: min(500px, 100%);
+      min-width: unset;
+      border-radius: 20px;
+    }
+  }
+
+  &__img {
+    @include mixins.dimensions100;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  &__position {
+    margin-bottom: 30px;
+  }
+
+  &__contacts {
+    margin-top: 32px;
+  }
+
+  &__contacts-link {
+    @include mixins.flexBox(center, flex-start);
+    gap: 15px;
+
+    svg {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  &__social {
+    margin-top: 47px;
+    gap: 35px;
+  }
+}
+
+// Bio
+.bio {
+  padding-bottom: 200px;
+
+  @media (width <= 991px) {
+    padding-bottom: 100px;
+  }
+
+  &__caption .main-title {
+    margin-bottom: 18px;
+    text-align: left;
+  }
+
+  &__details {
+    @include mixins.flexBox(flex-start, space-between);
+    gap: 95px;
+    margin-top: 45px;
+
+    @media (width <= 991px) {
+      gap: 60px;
+    }
+
+    @media (width <= 767px) {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    flex: 0 1 50%;
+
+    .main-title {
+      font-size: 25px;
+      line-height: 37.5px;
+      margin-bottom: 12px;
+      text-align: left;
+    }
+  }
+
+  .skillbox {
+    margin-top: 30px;
+    width: min(533px, 100%);
+
+    &__item + .skillbox__item {
+      margin-top: 20px;
+    }
+
+    &__name {
+      font-weight: 500;
+      margin-bottom: 10px;
+      position: relative;
+      display: inline-block;
+      padding-right: 10px;
+      background: vars.$white;
+    }
+
+    &__bar {
+      width: 100%;
+      height: 5px;
+      background: vars.$light;
+      border-radius: 2px;
+      position: relative;
+    }
+
+    &__progress {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background: vars.$sandy;
+      border-radius: inherit;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -11px;
+        width: 22px;
+        height: 22px;
+        border: 5px solid vars.$sandy;
+        border-radius: 50%;
+        background: vars.$white;
+      }
+
+      &-tooltip {
+        position: absolute;
+        top: -35px;
+        right: -1px;
+        z-index: -1;
+        transform: translateX(50%);
+      }
+    }
+  }
+
+  .questions {
+    margin-top: 25px;
+  }
+
+  .question {
+    background: vars.$white;
+    border: 1px solid vars.$sandy;
+    border-radius: 18px;
+    padding: 14px 23px;
+    // transition: 0.5s;
+
+    & + .question {
+      margin-top: 30px;
+    }
+
+    &.open {
+      background: vars.$light;
+
+      .question__icon {
+        background: vars.$white;
+      }
+
+      .question__icon span:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(0turn);
+      }
+
+      // .question__text {
+      //   margin: 15px 0 25px;
+      // }
+    }
+
+    &__caption {
+      @include mixins.flexBox(center, space-between);
+      gap: 30px;
+    }
+
+    &__title {
+      @include mixins.insertFont(18px, 22.5px, 600, 'Jost');
+    }
+
+    &__icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: vars.$light;
+      position: relative;
+      transition: 0.5s;
+
+      span {
+        height: 2px;
+        width: 40%;
+        background: vars.$dark;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.5s;
+      }
+
+      span:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(-0.25turn);
+      }
+    }
+  }
+}
+
+// Interact
+.interact {
+  padding: 200px 0 100px;
+
+  @media (width <= 991px) {
+    padding-top: 100px;
+  }
+
+  .main-title {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media (width <= 767px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .mailbox__form {
+    max-width: 795px;
+    margin: 0 auto;
+  }
+
+  .mailbox__label.consent {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,132 @@
+{% set title = 'Pricing' %}
+{% set icon = 'images/favicon.svg' %}
+{% from 'templates/page-caption.html' import pageCaption as pageCaption %}
+
+{% include 'components/_header.html' %}
+
+<main class="main" id="pricing-page">
+
+  {{ pageCaption('pricing-hero', 'Pricing', 'pricing-page/pricing-bg.jpg', [
+    {
+      linkName: 'Home',
+      linkUrl: '/'
+    }
+  ]) }}
+
+  <section class="pricing">
+    <div class="container">
+      <div class="pricing__body">
+        <div class="pricing__cards">
+          <div class="pricing__card">
+            <div class="pricing__card-caption">
+              <h4 class="main-title">
+                Design advices
+              </h4>
+              <span class="pricing__card-currency">$</span>
+              <span class="pricing__card-price">29</span>
+              <p class="pricing__card-text">/month</p>
+            </div>
+            <p class="pricing__card-mark">
+              <span>
+                Most Popular Plans
+              </span>
+            </p>
+            <ul class="pricing__card-list">
+              <li class="pricing__card-list-item">
+                General living space advices
+              </li>
+              <li class="pricing__card-list-item">
+                Rennovation advices
+              </li>
+              <li class="pricing__card-list-item">
+                Interior design advices
+              </li>
+              <li class="pricing__card-list-item">
+                Furniture reorganization
+              </li>
+              <li class="pricing__card-list-item">
+                Up to 5 hours meetings
+              </li>
+            </ul>
+            <a class="main-link" href="#">
+              Get Started {% include 'images/arrow-right.svg' %}
+            </a>
+          </div>
+          <div class="pricing__card highlighted">
+            <div class="pricing__card-caption">
+              <h4 class="main-title">
+                Complete interior
+              </h4>
+              <span class="pricing__card-currency">$</span>
+              <span class="pricing__card-price">39</span>
+              <p class="pricing__card-text">/month</p>
+            </div>
+            <p class="pricing__card-mark">
+              <span>
+                Most Popular Plans
+              </span>
+            </p>
+            <ul class="pricing__card-list">
+              <li class="pricing__card-list-item">
+                Complete home redesign
+              </li>
+              <li class="pricing__card-list-item">
+                Interior and exterior works
+              </li>
+              <li class="pricing__card-list-item">
+                Modular interior planning
+              </li>
+              <li class="pricing__card-list-item">
+                Kitchen design
+              </li>
+              <li class="pricing__card-list-item">
+                Garages organization
+              </li>
+            </ul>
+            <a class="main-link" href="#">
+              Get Started {% include 'images/arrow-right.svg' %}
+            </a>
+          </div>
+          <div class="pricing__card">
+            <div class="pricing__card-caption">
+              <h4 class="main-title">
+                Furniture design
+              </h4>
+              <span class="pricing__card-currency">$</span>
+              <span class="pricing__card-price">59</span>
+              <p class="pricing__card-text">/month</p>
+            </div>
+            <p class="pricing__card-mark">
+              <span>
+                Most Popular Plans
+              </span>
+            </p>
+            <ul class="pricing__card-list">
+              <li class="pricing__card-list-item">
+                Furniture for living room
+              </li>
+              <li class="pricing__card-list-item">
+                Furniture refurbishment
+              </li>
+              <li class="pricing__card-list-item">
+                Sofas and amchairs
+              </li>
+              <li class="pricing__card-list-item">
+                Tables and chairs
+              </li>
+              <li class="pricing__card-list-item">
+                Kitchens
+              </li>
+            </ul>
+            <a class="main-link" href="#">
+              Get Started {% include 'images/arrow-right.svg' %}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{% include 'components/_footer.html' %}

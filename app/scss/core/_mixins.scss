@@ -1,0 +1,44 @@
+// Import fonts
+@mixin importFont($name, $weightName, $weight) {
+  @font-face {
+    src: url("../fonts/#{$name}/#{$name}-#{$weightName}.ttf") format("truetype");
+    font: {
+      family: $name;
+      weight: $weight;
+      display: swap;
+    }
+  }
+}
+
+// Inserting fonts
+@mixin insertFont($size, $lineHeight, $weight: false, $family: false) {
+  font-size: $size;
+  line-height: $lineHeight;
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $family {
+    font-family: $family, sans-serif;
+  }
+}
+
+// Flexbox
+@mixin flexBox($alItems: false, $jContent: false, $flex: flex) {
+  display: $flex;
+
+  @if $alItems {
+    align-items: $alItems;
+  }
+
+  @if $jContent {
+    justify-content: $jContent;
+  }
+}
+
+// Full dimensions
+@mixin dimensions100 {
+  width: 100%;
+  height: 100%;
+}
